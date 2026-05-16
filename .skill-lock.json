@@ -335,6 +335,96 @@
       "pluginName": "example-skills",
       "installedAt": "2026-05-16T07:18:15.223Z",
       "updatedAt": "2026-05-16T07:18:15.223Z"
+    },
+    "rust-async-patterns": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/wshobson/agents.git",
+      "skillPath": "plugins/systems-programming/skills/rust-async-patterns/SKILL.md",
+      "skillFolderHash": "e875a4c5635ed79fca46bd315ce5cc75bd39e252",
+      "installedAt": "2026-05-16T10:19:55.420Z",
+      "updatedAt": "2026-05-16T10:19:55.420Z"
+    },
+    "rust-best-practices": {
+      "source": "apollographql/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/apollographql/skills.git",
+      "skillPath": "skills/rust-best-practices/SKILL.md",
+      "skillFolderHash": "73bee942cb621e4ee7f2c3f86de01ab09638ee5d",
+      "installedAt": "2026-05-16T10:20:10.297Z",
+      "updatedAt": "2026-05-16T10:20:10.297Z"
+    },
+    "rust-mcp-server-generator": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/rust-mcp-server-generator/SKILL.md",
+      "skillFolderHash": "db412fc9452d20c92687d5379d3cb0a7069d158a",
+      "installedAt": "2026-05-16T10:20:38.610Z",
+      "updatedAt": "2026-05-16T10:20:38.610Z"
+    },
+    "m15-anti-pattern": {
+      "source": "zhanghandong/rust-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/zhanghandong/rust-skills.git",
+      "skillPath": "skills/m15-anti-pattern/SKILL.md",
+      "skillFolderHash": "44d2b1226ec9a23afd6bc18f08f8d2623cfa94f4",
+      "installedAt": "2026-05-16T10:20:54.657Z",
+      "updatedAt": "2026-05-16T10:20:54.657Z"
+    },
+    "rust-testing": {
+      "source": "affaan-m/everything-claude-code",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/everything-claude-code.git",
+      "skillPath": "skills/rust-testing/SKILL.md",
+      "skillFolderHash": "d1a20de880fd1146afd6f895c26e3a2fee9b445e",
+      "installedAt": "2026-05-16T10:21:14.625Z",
+      "updatedAt": "2026-05-16T10:21:14.625Z"
+    },
+    "rust-patterns": {
+      "source": "affaan-m/everything-claude-code",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/everything-claude-code.git",
+      "skillPath": "skills/rust-patterns/SKILL.md",
+      "skillFolderHash": "67044ddf6e68f4ff15544bc061b31c93ac16cdba",
+      "installedAt": "2026-05-16T10:21:35.723Z",
+      "updatedAt": "2026-05-16T10:21:35.723Z"
+    },
+    "pytorch-patterns": {
+      "source": "affaan-m/everything-claude-code",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/everything-claude-code.git",
+      "skillPath": "skills/pytorch-patterns/SKILL.md",
+      "skillFolderHash": "e14d9a75ff47b312ef0e49a20358e054a32029e8",
+      "installedAt": "2026-05-16T10:40:08.401Z",
+      "updatedAt": "2026-05-16T10:40:08.401Z"
+    },
+    "deep-learning-pytorch": {
+      "source": "mindrally/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mindrally/skills.git",
+      "skillPath": "deep-learning-pytorch/SKILL.md",
+      "skillFolderHash": "da591ddaf62c4f227e9fe9902fe7acacfdb2dd19",
+      "installedAt": "2026-05-16T10:40:42.101Z",
+      "updatedAt": "2026-05-16T10:40:42.101Z"
+    },
+    "deep-learning": {
+      "source": "mindrally/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mindrally/skills.git",
+      "skillPath": "deep-learning/SKILL.md",
+      "skillFolderHash": "8bbe0a93db2b8158e8bf8a039fffb9e7cb414709",
+      "installedAt": "2026-05-16T10:40:54.654Z",
+      "updatedAt": "2026-05-16T10:40:54.654Z"
+    },
+    "deep-learning-python": {
+      "source": "mindrally/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mindrally/skills.git",
+      "skillPath": "deep-learning-python/SKILL.md",
+      "skillFolderHash": "0cd28d1790c565c2bc0d5bc6d42156d428fe3421",
+      "installedAt": "2026-05-16T10:41:12.683Z",
+      "updatedAt": "2026-05-16T10:41:12.683Z"
     }
   },
   "dismissed": {}

@@ -10,4 +10,6 @@
 {"ts":"2026-05-16T16:30:00+08:00","action":"add","type":"learning","id":"LRN-20260516-005","summary":"更新 skill 后必须检查新 skill、版本变化、更新 README，完整闭环"}
 {"ts":"2026-05-16T17:00:00+08:00","action":"add","type":"learning","id":"LRN-20260516-006","summary":"执行命令后必须向用户汇报结果（状态、位置、错误原因），闭环意识"}
 {"ts":"2026-05-16T17:00:00+08:00","action":"add","type":"learning","id":"LRN-20260516-007","summary":"主要任务完成后必须执行复盘四步法，沉淀规律到 LEARNINGS.md"}
+{"ts":"2026-05-16T18:21:00+08:00","action":"add","type":"learning","id":"LRN-20260516-008","summary":"新增分类时须同步更新 AGENTS.md 和 README.md 的分类说明表"}
+{"ts":"2026-05-16T18:30:00+08:00","action":"add","type":"learning","id":"LRN-20260516-009","summary":"搜索 skill 需多角度关键词搜索，区分用户用和项目内部用的 skill"}
 ```

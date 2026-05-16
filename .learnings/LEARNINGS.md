@@ -224,4 +224,60 @@ cat .skill-lock.json | grep -A5 "lark-im"
 - Source: best_practice
 - Pattern-Key: retrospective-after-task
 - See Also: LRN-20260516-003, LRN-20260516-006
+
+---
+
+## [LRN-20260516-008] best_practice
+
+**Priority**: medium
+**Status**: pending
+**Area**: docs
+
+### 内容
+
+安装新分类的 skill 时，如果现有分类无法覆盖，应新增分类并同步更新 AGENTS.md 和 README.md 的分类说明表。
+
+**操作流程**：
+1. 搜索并筛选 skill
+2. 安装 skill
+3. 读取每个 SKILL.md 的 frontmatter（版本、描述、来源）
+4. 读取 `.skill-lock.json` 验证来源信息
+5. 判断是否需要新增分类
+6. 更新 README.md 的 skill 目录（添加条目 + 更新计数 + 更新时间戳）
+7. 更新 README.md 的分类说明表
+8. 更新 AGENTS.md 的分类说明表
+
+**来源判断规则**：
+- `apollographql/skills` → Apollo GraphQL 是知名公司 → 🏢 官方
+- `github/awesome-copilot` → GitHub 是知名公司 → 🏢 官方
+- `wshobson/agents`、`affaan-m/everything-claude-code`、`zhanghandong/rust-skills` → 个人/社区 → 🌐 社区
+
+### 元数据
+- Source: best_practice
+- Pattern-Key: new-category-sync
+- See Also: LRN-20260516-001, LRN-20260516-005
+
+---
+
+## [LRN-20260516-009] best_practice
+
+**Priority**: medium
+**Status**: pending
+**Area**: search
+
+### 内容
+
+搜索 skill 时，同一领域的 skill 可能分散在不同关键词下，需要多角度搜索才能全面覆盖。
+
+**操作流程**：
+1. 用核心关键词搜索（如 `pytorch`）
+2. 用领域关键词搜索（如 `deep learning`）
+3. 用具体任务关键词搜索（如 `neural network training`）
+4. 合并去重后，根据安装量和来源质量筛选
+5. 区分"用户用"和"项目内部用"的 skill（如 PyTorch 官方的 docstring/pr-review 是项目内部用的，不是写深度学习代码用的）
+
+### 元数据
+- Source: best_practice
+- Pattern-Key: multi-angle-search
+- See Also: LRN-20260516-008
 ---
