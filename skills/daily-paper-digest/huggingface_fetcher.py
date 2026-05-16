@@ -46,7 +46,7 @@ class HuggingFaceFetcher:
             soup = BeautifulSoup(response.text, 'html.parser')
             
             # 查找论文卡片
-            paper_cards = soup.find_all('article', limit=self.max_results)
+            paper_cards = soup.find_all('article', class_='overview-card-wrapper', limit=self.max_results)
             
             for card in paper_cards:
                 try:

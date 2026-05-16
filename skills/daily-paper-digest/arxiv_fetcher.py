@@ -31,7 +31,8 @@ class ArxivFetcher:
             论文列表，每篇论文包含标题、作者、摘要、链接等信息
         """
         papers = []
-        last_week = datetime.now() - timedelta(days=7)
+        yesterday = datetime.now() - timedelta(days=1)
+        date_str = yesterday.strftime('%Y%m%d')
         
         for category in self.categories:
             try:
@@ -47,8 +48,8 @@ class ArxivFetcher:
                 
                 # 获取结果
                 for result in search.results():
-                    # 只获取最近一周的论文
-                    if result.published.date() >= last_week.date():
+                    # 只获取最近一天的论文
+                    if result.published.date() >= yesterday.date():
                         paper = {
                             'title': result.title,
                             'authors': [author.name for author in result.authors],
