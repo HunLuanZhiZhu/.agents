@@ -155,3 +155,73 @@ cat .skill-lock.json | grep -A5 "lark-im"
 - See Also: LRN-20260516-004
 
 ---
+
+## [LRN-20260516-006] correction
+
+**Priority**: high
+**Status**: resolved
+**Area**: communication
+
+### 内容
+
+执行命令后没有向用户汇报结果，缺少沟通和汇报意识。
+
+**错误行为**：执行 `lark-cli docs +create` 创建飞书文档后，没有向用户汇报：
+- 是否创建成功
+- 创建在哪里（URL）
+- 文档标题是什么
+
+**正确做法**：P8 的闭环意识——**对结果负责**。执行操作后必须：
+1. 检查命令输出（成功/失败）
+2. 向用户汇报关键信息（状态、结果、位置）
+3. 如果失败，说明错误原因和下一步操作
+4. 如果成功，提供可访问的链接或位置
+
+### 建议修复
+
+在 AGENTS.md 中增加规则：执行任何操作后，必须向用户汇报结果。
+
+### 元数据
+- Source: correction
+- Pattern-Key: report-after-action
+- See Also: LRN-20260516-005
+
+---
+
+## [LRN-20260516-007] best_practice
+
+**Priority**: high
+**Status**: pending
+**Area**: self-evolution
+
+### 内容
+
+完成任务后没有主动进行复盘沉淀，缺乏自我进化意识。
+
+**错误行为**：成功创建飞书文档后，没有：
+1. 回顾目标（用户要什么）
+2. 评估结果（实际交付了什么）
+3. 分析原因（弯路的根因）
+4. 沉淀规律（可复用的经验）
+
+**正确做法**：P9 的复盘四步法——每次主要任务完成后执行：
+1. **回顾目标**：用户要的是什么？验收标准是什么？
+2. **评估结果**：实际交付了什么？有差距吗？有超预期吗？
+3. **分析原因**：弯路的根因——信息不足、方案选错、还是执行偏差？
+4. **沉淀规律**：可复用的经验是什么？好的复盘产出 SOP，不是"下次注意"
+
+**本次复盘**：
+- 目标：创建飞书云文档
+- 结果：成功创建，URL: https://ncnohlox1lcz.feishu.cn/docx/AZ2NdX6wWo0Zo4x8It2cqgDknPc
+- 弯路：lark-cli 未配置 → 需要先执行 `lark-cli config init --new`
+- 规律：使用飞书 skill 前，先检查配置状态（`lark-cli config list`）
+
+### 建议修复
+
+在 AGENTS.md 中增加规则：主要任务完成后，必须执行复盘四步法，并将经验写入 LEARNINGS.md。
+
+### 元数据
+- Source: best_practice
+- Pattern-Key: retrospective-after-task
+- See Also: LRN-20260516-003, LRN-20260516-006
+---
