@@ -270,6 +270,43 @@
       "skillFolderHash": "142ad08748a39ddce09dab89393be20f5fa28ccf",
       "installedAt": "2026-05-16T04:11:36.887Z",
       "updatedAt": "2026-05-16T04:11:36.887Z"
+    },
+    "proactive-self-improving-agent": {
+      "source": "yanhongxi-openclaw/proactive-self-improving-agent",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/yanhongxi-openclaw/proactive-self-improving-agent.git",
+      "skillPath": "SKILL.md",
+      "skillFolderHash": "5af957709186392fb9892382d0ffb26e8095ad65",
+      "installedAt": "2026-05-16T04:29:58.873Z",
+      "updatedAt": "2026-05-16T04:29:58.873Z"
+    },
+    "agent-browser": {
+      "source": "vercel-labs/agent-browser",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-browser.git",
+      "skillPath": "skills/agent-browser/SKILL.md",
+      "skillFolderHash": "c1470a475a0472fceda2401ea6763708a91680a8",
+      "pluginName": "agent-browser",
+      "installedAt": "2026-05-16T04:33:45.719Z",
+      "updatedAt": "2026-05-16T04:33:45.719Z"
+    },
+    "weather": {
+      "source": "steipete/clawdis",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/steipete/clawdis.git",
+      "skillPath": "skills/weather/SKILL.md",
+      "skillFolderHash": "92d7ded87d154c3d0cabc794ac131e051be3d621",
+      "installedAt": "2026-05-16T04:54:59.851Z",
+      "updatedAt": "2026-05-16T04:54:59.851Z"
+    },
+    "paper-digest": {
+      "source": "iamseungpil/claude-for-dslab",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/iamseungpil/claude-for-dslab.git",
+      "skillPath": "skills/paper-digest/SKILL.md",
+      "skillFolderHash": "5fb73408afd6dcc67cfea185d73572163640ef6b",
+      "installedAt": "2026-05-16T05:23:28.648Z",
+      "updatedAt": "2026-05-16T05:23:28.648Z"
     }
   },
   "dismissed": {}
