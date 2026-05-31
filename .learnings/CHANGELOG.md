@@ -12,4 +12,5 @@
 {"ts":"2026-05-16T17:00:00+08:00","action":"add","type":"learning","id":"LRN-20260516-007","summary":"主要任务完成后必须执行复盘四步法，沉淀规律到 LEARNINGS.md"}
 {"ts":"2026-05-16T18:21:00+08:00","action":"add","type":"learning","id":"LRN-20260516-008","summary":"新增分类时须同步更新 AGENTS.md 和 README.md 的分类说明表"}
 {"ts":"2026-05-16T18:30:00+08:00","action":"add","type":"learning","id":"LRN-20260516-009","summary":"搜索 skill 需多角度关键词搜索，区分用户用和项目内部用的 skill"}
+{"ts":"2026-05-16T18:35:00+08:00","action":"add","type":"learning","id":"LRN-20260516-010","summary":"用户提供 GitHub URL 时可直接安装，无需先搜索"}
 ```

@@ -280,4 +280,31 @@ cat .skill-lock.json | grep -A5 "lark-im"
 - Source: best_practice
 - Pattern-Key: multi-angle-search
 - See Also: LRN-20260516-008
+
+---
+
+## [LRN-20260516-010] best_practice
+
+**Priority**: low
+**Status**: pending
+**Area**: install
+
+### 内容
+
+用户提供了明确的 GitHub 仓库 URL 时，可以直接使用 `npx skills add <url> --skill <skill-name>` 安装，无需先搜索。
+
+**安装命令格式**：
+```bash
+npx skills add https://github.com/owner/repo --skill skill-name -g -y
+```
+
+**来源判断**：
+- 个人 GitHub 账号（如 `op7418`）→ 👤 个人
+- 知名公司官方账号（如 `anthropics`、`github`）→ 🏢 官方
+- 社区组织账号 → 🌐 社区
+
+### 元数据
+- Source: best_practice
+- Pattern-Key: direct-url-install
+- See Also: LRN-20260516-009
 ---

@@ -1,0 +1,3 @@
+interface:
+  display_name: "Zuhui Paper Ppt"
+  short_description: "Build dense Chinese group-meeting paper PPTX decks"

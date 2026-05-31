@@ -425,6 +425,15 @@
       "skillFolderHash": "0cd28d1790c565c2bc0d5bc6d42156d428fe3421",
       "installedAt": "2026-05-16T10:41:12.683Z",
       "updatedAt": "2026-05-16T10:41:12.683Z"
+    },
+    "guizang-ppt-skill": {
+      "source": "op7418/guizang-ppt-skill",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/op7418/guizang-ppt-skill.git",
+      "skillPath": "SKILL.md",
+      "skillFolderHash": "6bfa520b86ed5a3dffdac0a3323155e2b6f516b6",
+      "installedAt": "2026-05-20T10:19:46.578Z",
+      "updatedAt": "2026-05-20T10:19:46.578Z"
     }
   },
   "dismissed": {}
