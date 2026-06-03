@@ -1,4 +1,4 @@
-﻿---
+---
 name: zuhui-ppt-source-audit
 description: Audit scientific paper sources for advanced Chinese group-meeting PPT creation. Use within the zuhui-ppt-master workflow when source PDFs, translated PDFs, previous PPT/HTML/PDF versions, figures, tables, or appendices must be inspected before slide planning. Focuses on translated figure/table extraction, asset manifests, previous-version criticism, and evidence inventory. Operates without external tool dependencies.
 ---

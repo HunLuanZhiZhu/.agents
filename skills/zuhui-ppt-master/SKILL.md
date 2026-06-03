@@ -1,4 +1,4 @@
-﻿---
+---
 name: zuhui-ppt-master
 description: Orchestrate premium Chinese journal-club and group-meeting paper presentations when the user asks for 组会PPT, 论文汇报PPT, paper sharing slides, Swiss-style scientific PPT, or PPT/HTML/PDF triple deliverables. This master skill coordinates five zuhui-ppt-* subskills through a source-audit → story-spine → swiss-design → triformat-export → qa pipeline. It internalizes Swiss International-style visual rules (IKB/Helvetica grid, S01-S22 registered layouts, template-swiss.html), evidence-first paper extraction methodology (claim+proof+caveat per slide, presentation logic routing, conclusion-style titles, slide archetype recipes, strategist-executor-critic iteration), and lean operating principles (minimum extraction, cross-platform toolchain, fast-path defaults) so it can operate without external skill dependencies.
 ---

@@ -1,4 +1,4 @@
-﻿---
+---
 name: zuhui-ppt-triformat-export
 description: Export synchronized PPTX, Swiss International HTML, and PDF versions of a Chinese group-meeting paper presentation. Use within the zuhui-ppt-master workflow after source audit, story spine, and Swiss visual planning. Ensures the three products remain aligned, preserves large paper figures, and records reproducible build scripts, notes, assets, and QA paths. Operates without external skill dependencies.
 ---

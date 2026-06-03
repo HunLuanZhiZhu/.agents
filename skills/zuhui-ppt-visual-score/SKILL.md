@@ -1,4 +1,4 @@
-﻿---
+---
 name: zuhui-ppt-visual-score
 description: Independent visual quality scoring agent for Chinese group-meeting paper presentations. Use after zuhui-ppt-qa structural checks to provide a per-slide and overall visual quality score across six dimensions: evidence readability, figure-text coordination, typography discipline, visual rhythm, content density, and audience clarity. Produces a structured score report that feeds back into the build iteration cycle. Operates without external skill dependencies.
 ---

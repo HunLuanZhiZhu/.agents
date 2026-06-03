@@ -1,4 +1,4 @@
-﻿---
+---
 name: zuhui-ppt-swiss-design
 description: Apply Swiss International-style visual design to dense Chinese paper presentations. Use in the zuhui-ppt-master workflow after the story spine is ready. All visual rules are internalized so this subskill operates without requiring guizang-ppt-skill as a runtime dependency. Uses IKB blue, dark chapter pages, registered S01-S22 layouts, large paper figures, and template-swiss.html.
 ---

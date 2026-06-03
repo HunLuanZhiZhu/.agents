@@ -1,4 +1,4 @@
-﻿---
+---
 name: zuhui-ppt-story-spine
 description: Build the scientific claim spine and evidence map for dense Chinese journal-club PPT decks. Use after source audit in the zuhui-ppt-master workflow to transform a paper, translated PDF, clean figure assets, rebuilt native tables, and audit notes into a slide-by-slide plan with claims, proof objects, caveats, and speaker intent. Includes presentation logic routing, conclusion-style title writing, slide archetype recipes, and evidence hierarchy rules. Operates without external tool dependencies.
 ---
