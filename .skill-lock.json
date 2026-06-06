@@ -434,6 +434,82 @@
       "skillFolderHash": "6bfa520b86ed5a3dffdac0a3323155e2b6f516b6",
       "installedAt": "2026-05-20T10:19:46.578Z",
       "updatedAt": "2026-05-20T10:19:46.578Z"
+    },
+    "docx": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "skillPath": "skills/docx/SKILL.md",
+      "skillFolderHash": "a0d216202f9793a78da44cf96aabe48f42e627ac",
+      "pluginName": "document-skills",
+      "installedAt": "2026-06-06T06:35:14.856Z",
+      "updatedAt": "2026-06-06T06:35:14.856Z"
+    },
+    "pptx": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "skillPath": "skills/pptx/SKILL.md",
+      "skillFolderHash": "10b3d70962e489867ddfee7da92f7da6b0eccc4f",
+      "pluginName": "document-skills",
+      "installedAt": "2026-06-06T06:36:12.484Z",
+      "updatedAt": "2026-06-06T06:36:12.484Z"
+    },
+    "xlsx": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "skillPath": "skills/xlsx/SKILL.md",
+      "skillFolderHash": "f5fb1cdb7993b2feee8367e983e9d4d58d2eedd4",
+      "pluginName": "document-skills",
+      "installedAt": "2026-06-06T06:37:23.341Z",
+      "updatedAt": "2026-06-06T06:37:23.341Z"
+    },
+    "pdf": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/openai/skills.git",
+      "skillPath": "skills/.curated/pdf/SKILL.md",
+      "skillFolderHash": "4cffaac4541278a5b142f9773e8a83ccbabc9231",
+      "installedAt": "2026-06-06T06:38:12.372Z",
+      "updatedAt": "2026-06-06T06:38:12.372Z"
+    },
+    "web-search": {
+      "source": "qu-skills/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/qu-skills/skills.git",
+      "skillPath": "tools/llm/web-search/SKILL.md",
+      "skillFolderHash": "3af5ba1bbf736494a7bc77d17baa7c5c20e2ae53",
+      "installedAt": "2026-06-06T06:54:05.624Z",
+      "updatedAt": "2026-06-06T06:54:05.624Z"
+    },
+    "paper-spine": {
+      "source": "wubing2023/paperspine",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/wubing2023/paperspine.git",
+      "skillPath": "dist/claude/skills/paper-spine/SKILL.md",
+      "skillFolderHash": "a5494fc5ce937737f6ebfb775e6f0dd044fa2cb6",
+      "pluginName": "paper-spine",
+      "installedAt": "2026-06-06T07:30:15.595Z",
+      "updatedAt": "2026-06-06T07:30:15.595Z"
+    },
+    "academic-researcher": {
+      "source": "shubhamsaboo/awesome-llm-apps",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/shubhamsaboo/awesome-llm-apps.git",
+      "skillPath": "awesome_agent_skills/academic-researcher/SKILL.md",
+      "skillFolderHash": "8baeb5b85d10e8c8ac55b16bb456a3607c75b07a",
+      "installedAt": "2026-06-06T07:33:35.498Z",
+      "updatedAt": "2026-06-06T07:33:35.498Z"
+    },
+    "visiomaster": {
+      "source": "Rss3208/Visiomaster",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/Rss3208/Visiomaster.git",
+      "skillPath": "SKILL.md",
+      "skillFolderHash": "0d49002c542dd8948d63a6e2a0c167006b04240e",
+      "installedAt": "2026-06-06T07:57:00.577Z",
+      "updatedAt": "2026-06-06T07:57:00.577Z"
     }
   },
   "dismissed": {}

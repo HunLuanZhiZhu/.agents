@@ -1,0 +1,40 @@
+# Release Checklist
+
+- [ ] Version is `3.1.6a`.
+- [ ] Workflow is `S0-PAPER-FOUNDATION -> S1-FIGURE-STRATEGY -> S2-SKETCH-EXPLORE -> S3-DIRECTION-SELECT -> S4-CANDIDATE-BRIEF -> S5-CANDIDATE-IMAGE -> S6-FINAL-SELECT -> S7-FINAL-JOINT-AUDIT`.
+- [ ] Strict human-in-the-loop alternation is enforced.
+- [ ] Copyable next prompts are inert handoffs; S1 stops after S2 TEXT_PREPARE prompt, S4 stops after S5 TEXT_PREPARE prompt, and S2/S5 TEXT_PREPARE stops before image generation.
+- [ ] Multi-choice text stages provide both default-choice and user-placeholder prompts.
+- [ ] Initial bootstrap gate is enforced.
+- [ ] S0 paper-foundation behavior is input-depth-sensitive.
+- [ ] S1 provides at least 8 complete S2 sketch candidate cards.
+- [ ] S2/S5 dynamic substage policy is documented and referenced from SKILL.md.
+- [ ] ChatGPT web S2/S5 use one full image batch when available: default S2 `C01-C08`, default S5 `C01-C06`; split only when required.
+- [ ] Codex S2/S5 candidate workers may run in parallel, but only the coordinator writes global state.
+- [ ] S2/S5 text substages do not generate images, and image substages do not write audit/ranking/explanation text.
+- [ ] Default S2/S5 still run post-image TEXT_AUDIT and then S2/S5 aggregate-checkpoint before S3/S6 in both Codex and ChatGPT web; strict checking only changes audit depth.
+- [ ] Main-flow plus detail-panel layouts keep the whole-framework main flow as the largest single region and first reader path.
+- [ ] Arrowheads point to information destinations/next steps; reverse, unsupported, decorative, duplicate, or ambiguous callout arrows are flagged as semantic failures.
+- [ ] S2/S5/S7 text substages save next-prompt guidance under `substage-guides/` before image-only units when needed.
+- [ ] ChatGPT web checkpoint rules include chunk checkpoints for S2/S5 and stage-final checkpoint zips for every main stage.
+- [ ] Peer-space or dual-consensus papers include consensus-space priority maps, visual weight plans, redundancy budgets, and missing-information risk checks before S2/S5 image generation.
+- [ ] S2 generates 8 raster exploration sketches.
+- [ ] S1-only manuscript story improvement proposals are capped at 2 and include evidence boundaries.
+- [ ] Story-driven narrative candidates in S1/S4 default to sparse, intuitive, lightly cartoon-like schematic treatment when helpful.
+- [ ] S4 provides complete candidate text contracts before S5.
+- [ ] S5 defaults to formal clean publication schematic raster candidates generated through Image Gen, Create Image, or a named approved image-generation API; programmatic raster substitutes such as Python/PIL/Matplotlib/Graphviz/TikZ/canvas screenshots/SVG-to-PNG/PPT rendering are invalid.
+- [ ] S6 selects one final S5 image and provides title, caption, legend, body-reference text, and S1-proposal carry-forward note without adding new manuscript improvement proposals.
+- [ ] S7 performs bounded joint audit and returns PASS/S7-INTERNAL-REPAIR/S7-ICON-SHEET-REPAIR/S7-BLOCKED-CONTRACT/S7-BLOCKED-DIRECTION/S7-BLOCKED-MAX-FINAL-REPAIR/S7-BLOCKED-MAX-ICON-SHEET.
+- [ ] S7 bounded audit table includes a dedicated Final contract fidelity pass against S6 `final-figure-contract.md`.
+- [ ] S7 final contract gate includes mandatory heavy connector/edge/area audit for endpoint/port fidelity, edge direction/cardinality/forbidden edges, connector crossing/occlusion/label overlap, area budget, and main-flow dominance; `final_only` does not disable this S7 audit.
+- [ ] S7 final-figure repair may attach the failed `pending-submission-figure.png` as visual reference input with the repair prompt and audit error list, while still forbidding crop/retouch/local-inpaint fixes that preserve audited visual faults.
+- [ ] S7 multi-repair attempts use the latest failed canonical `pending-submission-figure.png`, latest failed audit/spec, and the source prompt/brief that produced that failed pending image; later repairs do not fall back to the original S6 selected raster.
+- [ ] S7 image actions are serial and capped at one image per internal image unit in every runtime.
+- [ ] S7 post-PASS element icon inventory and cuttable icon sheets are required before completion.
+- [ ] Re-entering S7 cleans prior S7 outputs/records and records cleanup before rerun.
+- [ ] `python scripts/figure_studio_architecture_audit.py --target . --fail-on-issue` passes.
+- [ ] `python -m compileall -q scripts` passes.
+- [ ] JSON templates validate.
+- [ ] State init/validate/doctor smoke tests pass.
+- [ ] Release path scanner reports no local absolute paths.
+- [ ] Package zip name is `paper-framework-figure-studio-pro-v3.1.6a-skill.zip`.

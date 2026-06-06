@@ -53,7 +53,9 @@ Skill 按功能分为以下类别。**分类体系可扩展**：当新增 skill 
 |------|------|
 | 🏢 飞书办公 | 飞书/Lark 生态相关（IM、日历、文档、会议等） |
 | 🔬 学术科研 | 论文、引用、图表、学术写作等 |
-| 🌐 浏览器与前端 | 浏览器自动化、前端设计等 |
+| 🌐 浏览器与前端 | 浏览器自动化、前端设计、网页 PPT、网络搜索等 |
+| 📊 组会 PPT | 学术组会/期刊俱乐部论文演示文稿制作（瑞士国际主义风格） |
+| 📄 文档处理 | Office 文档处理（Word/PPT/Excel/PDF 等） |
 | 🦀 Rust 开发 | Rust 编程语言相关（最佳实践、异步模式、测试、反模式等） |
 | � 深度学习 | 深度学习/PyTorch 相关（训练管线、模型架构、数据加载等） |
 | �🤖 Agent 增强 | 提升 agent 自身能力的 skill |
@@ -103,3 +105,13 @@ README 目录中的 skill 条目应标注来源信息：
 - 下载日期以首次安装日期为准，更新 skill 时不修改原始下载日期，但记录更新日期
 - 如果 skill 的 SKILL.md 没有 version 字段，版本栏标注 `-`
 - 来源信息如无法从安装记录获取，标注 `unknown`
+<!-- ARIS-CODEX:BEGIN -->
+## ARIS Codex Skill Scope
+ARIS skills installed in this project: 79 entries.
+Manifest: `.aris/installed-skills-codex.txt`
+ARIS repo root: `D:\Awesome-Auto-Research-Tools\Auto-claude-code-research-in-sleep`
+Project skill path: `.agents/skills/<skill-name>`
+For ARIS workflows, prefer the project-local skills under `.agents/skills/`.
+Do not edit or delete junctioned skills in place; update upstream or rerun:
+`powershell -NoProfile -ExecutionPolicy Bypass -File "D:\Awesome-Auto-Research-Tools\Auto-claude-code-research-in-sleep\tools\install_aris.ps1" "C:\Users\admin\.agents" -Platform codex -Reconcile`
+<!-- ARIS-CODEX:END -->

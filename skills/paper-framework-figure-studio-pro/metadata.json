@@ -1,0 +1,142 @@
+{
+  "name": "paper-framework-figure-studio-pro",
+  "display_name": "Paper Framework Figure Studio Pro",
+  "version": "3.1.6a",
+  "license": "MIT-0",
+  "entrypoint": "SKILL.md",
+  "openclaw": {
+    "skillKey": "paper-framework-figure-studio-pro"
+  },
+  "description": "S0-PAPER-FOUNDATION to terminal S7-FINAL-JOINT-AUDIT research-paper framework figure studio with strict human-in-the-loop one-step alternation, persistent relative-path state, hard raster gates for S2/S5 candidate images that require Image Gen/Create Image/a named approved image-generation API and reject programmatic raster substitutes, v3.1.6a dynamic S2/S5 substages, ChatGPT web full-batch S2/S5 image generation when available, Codex parallel candidate workers, saved substage user guidance, resumable S2/S5/S7 internal state, checkpoint zip bundles, paper-grounded global exploration with at least 8 S1/S2 first-round sketch options, whole-paper coverage defaults requiring complete-paper overview candidates to dominate S2 unless the user asks for a scoped mechanism figure, two-level F1-F4/atlas plus style-lens selection, optional first/second-round per-image connector/area contract checks with final_only as the default while core-module internal-detail contracts remain mandatory, generalized S2/S5 audits driven by S0 paper risks and candidate contracts, S6 final-figure-contract generation, S1-only manuscript story/logic improvement proposals capped at 2, formal schematic raster candidates, Story-driven narrative visual defaults, multi-space visual balance for paper-primary mechanisms, semantic lineage and dual-use artifact guardrails, figure-caption symbiosis, style-aware captions, semantic icon/arrow/color checks, semantic element separability for downstream layer extraction, layered-inset redundancy control, connector/callout quality checks, bounded final joint audit, pending-submission figure lifecycle, S7 contract-gated approval with mandatory final heavy connector/edge/area audit, mandatory S7 internal workflow that forbids one-response completion, S7 style-locked full-image regeneration from the latest audit and image for at most three final-figure repair rounds, post-PASS S7 element icon inventory and cuttable icon sheets, no-S8 terminal finalization, final reconstruction specification, final selected image path/display, and integrated figure title/caption/legend/body-reference text at S6 followed by S7 internal approval and submitted-final promotion.",
+  "tags": [
+    "research-figure",
+    "paper-framework",
+    "architecture-diagram",
+    "pipeline-diagram",
+    "imagegen",
+    "persistent-state",
+    "resumable-workflow",
+    "human-in-the-loop",
+    "one-step-at-a-time",
+    "explicit-s0-entry",
+    "no-auto-advance",
+    "global-exploration",
+    "dynamic-substages",
+    "s2-s5-substages",
+    "chatgpt-web-full-batch-s2-s5",
+    "codex-parallel-candidates",
+    "checkpoint-zip",
+    "candidate-level-resume",
+    "eight-sketch-exploration",
+    "whole-paper-coverage",
+    "complete-paper-framework-default",
+    "scoped-probe-budget",
+    "s1-manuscript-story-improvement",
+    "final-only-contract-check-default",
+    "optional-first-round-contract-check",
+    "optional-second-round-contract-check",
+    "s6-final-figure-contract",
+    "s7-contract-gate",
+    "s7-heavy-connector-edge-area-audit",
+    "final-area-budget-audit",
+    "final-edge-cardinality-audit",
+    "saved-substage-guidance",
+    "s7-internal-workflow",
+    "s7-no-one-step-completion",
+    "s7-style-locked-repair",
+    "element-icon-sheet-package",
+    "story-driven-narrative-defaults",
+    "consensus-space-visual-balance",
+    "peer-mechanism-priority",
+    "semantic-lineage",
+    "dual-use-artifact",
+    "artifact-lineage-table",
+    "lineage-semantics-audit",
+    "two-level-style-selection",
+    "style-lens-matrix",
+    "f1-f4-atlas-routing",
+    "local-refinement",
+    "s3-branch-prompt",
+    "formal-candidate-images",
+    "s6-final-selection",
+    "s7-final-joint-audit",
+    "pending-submission-figure",
+    "submission-final-figure",
+    "s7-audit-driven-regeneration",
+    "no-s8",
+    "figure-text",
+    "figure-caption-symbiosis",
+    "style-aware-caption",
+    "semantic-icon-selection",
+    "semantic-element-separability",
+    "layer-extraction-readiness",
+    "layered-inset-redundancy-control",
+    "connector-callout-quality",
+    "figure-reconstruction-spec",
+    "element-inventory",
+    "layout-reconstruction",
+    "bounded-audit",
+    "placeholder-choice-prompt",
+    "minimal-semantic-figure",
+    "semantic-completeness",
+    "core-substep-preservation",
+    "core-internal-contract-always-on",
+    "core-module-opacity-gate",
+    "figure-caption-codesign",
+    "candidate-text-contract",
+    "paper-deep-reading",
+    "architecture-governance",
+    "not-poster",
+    "not-ppt-slide",
+    "default-16x9"
+  ],
+  "workflow": [
+    {
+      "step": "S0-PAPER-FOUNDATION",
+      "mode": "TEXT_ONLY",
+      "purpose": "startup, state, input-depth-sensitive paper reading, artifact lineage table when applicable, default aspect ratio, and candidate count"
+    },
+    {
+      "step": "S1-FIGURE-STRATEGY",
+      "mode": "TEXT_ONLY",
+      "purpose": "material reading, figure-type diagnosis, first-level F1-F4/atlas routing, second-level style_lens_id selection, core innovation module identification, semantic lineage and dual-use artifact planning when applicable, whole-paper coverage mapping with scoped-probe budget for complete framework requests, consensus-space priority planning when peer mechanisms exist, at least 8 S2 candidate-card planning, and optional S1-only manuscript story/logic improvement proposals capped at 2"
+    },
+    {
+      "step": "S2-SKETCH-EXPLORE",
+      "mode": "DYNAMIC_TEXT_IMAGE_SUBSTAGES",
+      "purpose": "8 global exploration low-fidelity sketches based on preceding candidate introductions; internally uses v3.1.6a dynamic substages with ChatGPT web full-batch image generation when available and Codex parallel candidate workers, followed by required TEXT_AUDIT and S2-99-text-aggregate-checkpoint in all modes; for complete framework requests, at least 5 sketches must be complete-paper overviews and scoped probes are capped; story/metaphor sketches must stay close to paper logic and use sparse intuitive visual defaults; dual-use artifacts must preserve lineage semantics; paper-primary mechanisms must keep visible anchors and not be displaced by redundant rows or legends; heavy per-image contract audit runs only when first_round_contract_check is enabled",
+      "default_aspect_ratio": "16:9"
+    },
+    {
+      "step": "S3-DIRECTION-SELECT",
+      "mode": "TEXT_ONLY",
+      "purpose": "global exploration synthesis, coverage-aware structure-direction selection, scoped-probe expansion planning when needed, and branched S4 next-prompt selection"
+    },
+    {
+      "step": "S4-CANDIDATE-BRIEF",
+      "mode": "TEXT_ONLY",
+      "purpose": "formal candidate matrix setup with per-candidate style_lens_id contracts, title/caption/legend contracts, Story-driven narrative defaults when applicable, dual-use artifact plans when applicable, density/caption burden, transfer boundary, image-visible core-step plans, and prompts"
+    },
+    {
+      "step": "S5-CANDIDATE-IMAGE",
+      "mode": "DYNAMIC_TEXT_IMAGE_SUBSTAGES",
+      "purpose": "formal paper-framework raster candidate generation from S4 style-lens contracts through Image Gen, ChatGPT Create Image, or a named approved image-generation API only; internally uses v3.1.6a dynamic substages with ChatGPT web full-batch image generation when available and Codex parallel candidate workers, followed by required TEXT_AUDIT and S5-99-text-aggregate-checkpoint in all modes; programmatic raster drawing is invalid. Candidates use clean publication schematic style with paper-faithful icons, arrows, colors, semantic lineage fidelity when applicable, figure-caption symbiosis, separable semantic elements for later layer extraction, redundancy-controlled insets, and clean connector/callout grammar; heavy per-candidate contract audit runs only when second_round_contract_check is enabled",
+      "default_aspect_ratio": "16:9"
+    },
+    {
+      "step": "S6-FINAL-SELECT",
+      "mode": "TEXT_ONLY",
+      "purpose": "selected raster reference path/display plus semantic lineage ranking when applicable, draft figure title, style-aware caption, legend, body-reference text, S1-proposal carry-forward note, and final-figure-contract generation; S7 follows"
+    },
+    {
+      "step": "S7-FINAL-JOINT-AUDIT",
+      "mode": "DYNAMIC_S7_TEXT_IMAGE_INTERNAL_WORKFLOW",
+      "purpose": "terminal bounded internal workflow whose first unit is a complete final audit of the selected/pending figure plus caption/legend/body text against the S6 final figure contract for paper fidelity, mandatory heavy connector/edge/area fidelity, semantic lineage fidelity when applicable, style-lens fit and transfer boundary, model/algorithm/process/math correctness, arrow/color/icon/symbol precision, semantic element separability, layered-detail redundancy, connector/callout quality, and reconstruction readiness; it saves the next guidance and stops, routes fixable image-level failures through at most three style-locked full-image regeneration rounds based on the latest failed audit and image, re-audits the latest image after each repair, and only later internal units may lock/spec, generate/audit element icon sheets, and final-aggregate completion"
+    }
+  ],
+  "finalization_route": "S6-FINAL-SELECT selects the reference image, drafts figure text, and generates the final figure contract; S7-FINAL-JOINT-AUDIT then enters an internal workflow and must not complete in one response. First S7 runs a full final audit of the materialized pending-submission figure plus figure text and saves next guidance. PASS routes to later lock/spec, icon inventory, icon sheet, icon-sheet audit, and final aggregate units. Fixable image-level failures regenerate one full-image replacement at a time from S0-S6 outputs plus the latest S7 audit report, the source prompt/brief that produced the latest failed pending image, and the latest failed pending image visual reference, while preserving the user-selected S6 image's style, layout, palette, icon language, and successful reader path unless the audit names one of those traits as the defect. Each repaired image receives a new complete audit. The default final-figure repair limit is three rounds. Every S7 image action is serial and generates exactly one image. There is no S8 or post-S7 delivery chain.",
+  "runtime_environment_policy": {
+    "atlas_board_display": "direct_markdown_image_embeds_required_when_mentioned",
+    "web_page_display_generation": "removed"
+  }
+}

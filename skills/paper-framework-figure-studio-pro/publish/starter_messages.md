@@ -1,0 +1,16 @@
+﻿# Starter Messages
+
+- `请按照 paper-framework-figure-studio-pro skill 的要求，根据当前状态和已登记产物，判断当前 step；如果这只是首次总目标请求，不要执行 S0，只给出进入 S0-PAPER-FOUNDATION 的可复制提示词；如果用户明确要求执行某个 step，只执行本轮用户明确要求的一个 step，完成后停下并给出下一步可复制提示词。`
+- `如果不知道如何提问，请说：请使用 paper-framework-figure-studio-pro 根据当前状态只建议下一步提示词，不要自动执行下一步`
+- `额外说明这个 skill 的设计初衷是什么。`
+- `请按照 paper-framework-figure-studio-pro skill 的要求，根据当前状态和已登记产物，进入 S0-PAPER-FOUNDATION。请先建立项目状态、确认运行环境、输入材料、画幅和候选数量默认值；如果输入包含 PDF/LaTeX/论文正文/详细方法描述，请只基于允许读取的论文内容生成并打印 paper-foundation-report.md；不要生成任何目标论文图像；完成 S0 后停止，只给出 S1-FIGURE-STRATEGY 的可复制提示词。`
+- `请按照 paper-framework-figure-studio-pro skill 的要求，根据当前状态和已登记产物，进入 S1-FIGURE-STRATEGY。根据论文材料和 S0-PAPER-FOUNDATION 深读记录给出图类型、读者效果和全局探索方向建议；必须准备至少 8 个 S2 sketch candidate cards。若发现论文原文叙述不清或作者没有讲清已被证据支持的亮点，只能在 S1 输出最多 2 个 manuscript story improvement proposals，并说明为什么这样改、证据锚点、安全 claim 和不能越界的 overclaim。完成 S1 后停止；只给出 S2 TEXT_PREPARE 的下一步可复制提示词，不要执行任何 S2 内部 substage，不要生成 S2 图像，也不要给出可直接生图的 image-only prompt。`
+- `请按照 paper-framework-figure-studio-pro skill 的要求，根据当前状态和已登记产物，进入 S2-SKETCH-EXPLORE，runtime=chatgpt_web。此轮只执行 S2 TEXT_PREPARE：规划 8 个候选的动态 substages、候选目录、prompt packages、substage-guides 和 next_prompt_registry；不要生成图片，不要执行 image-only prompt，不要审核，不要进入 S3。完成本 text substage 后停止，只给出第一个 image-only unit 的可复制提示词。`
+- `请按照 paper-framework-figure-studio-pro skill 的要求，根据当前状态和已登记产物，继续 S2-SKETCH-EXPLORE 的已保存 image-only unit。只生成保存提示词指定的候选图，不要写审核、解释、排序或下一步文字；生成后停止，等待用户下一条消息执行 TEXT_AUDIT。`
+- `请按照 paper-framework-figure-studio-pro skill 的要求，根据当前状态和已登记产物，进入 S3-DIRECTION-SELECT。评估 S2 的低保真草图并选择进入局部细化的结构方向；完成后不要进入 S4，但必须给出 S4-CANDIDATE-BRIEF 的下一步提示词，并在共享部分外提供两个分支：A 后续参考图继续保持手绘特色；B 后续参考图更倾向于清晰正式、语义精准、图文共生的论文图，默认选择 B。`
+- `请按照 paper-framework-figure-studio-pro skill 的要求，根据当前状态和已登记产物，进入 S4-CANDIDATE-BRIEF。按 S3 选择和论文事实生成正式候选矩阵、prompt contracts、figure-vs-caption 分工、箭头/颜色/图标语义、核心机制可见性计划，以及每个 source-grounded 核心模块的 compact core_module_internal_contract。完成 S4 后停止；只给出 S5 TEXT_PREPARE 的下一步可复制提示词，不要执行任何 S5 内部 substage，不要生成 S5 图像，也不要给出可直接生图的 image-only prompt。`
+- `请按照 paper-framework-figure-studio-pro skill 的要求，根据当前状态和已登记产物，进入 S5-CANDIDATE-IMAGE，runtime=chatgpt_web。此轮只执行 S5 TEXT_PREPARE：按 S4-CANDIDATE-BRIEF 规划候选目录、prompt packages、full-batch image unit when available、substage-guides 和 next_prompt_registry；不要生成图片，不要执行 image-only prompt，不要审核，不要进入 S6。完成本 text substage 后停止，只给出第一个 image-only unit 的可复制提示词。`
+- `请按照 paper-framework-figure-studio-pro skill 的要求，根据当前状态和已登记产物，继续 S5-CANDIDATE-IMAGE 的已保存 image-only unit。只生成保存提示词指定的候选图，不要写审核、解释、排序或下一步文字；生成后停止，等待用户下一条消息执行 TEXT_AUDIT。`
+- `请按照 paper-framework-figure-studio-pro skill 的要求，根据当前状态和已登记产物，进入 S6-FINAL-SELECT。从 S5-CANDIDATE-IMAGE 中选出最终图，给出选中路径/展示、选择理由、论文事实核对、figure title、style-aware caption、legend、正文引用句、S1-proposal carry-forward note，并生成 final-figure-contract.md。完成 S6 后停止，不要执行 S7，只给出 S7-FINAL-JOINT-AUDIT 的下一步提示词。`
+- `请按照 paper-framework-figure-studio-pro skill 的要求，根据当前状态和已登记产物，进入 S7-FINAL-JOINT-AUDIT，runtime=chatgpt_web。请按 S7 ChatGPT web internal loop 处理：text units 写审计/引导/检查点，image units 每次只生成一张图；如果 pending-submission figure 存在可由 fresh raster 解决的图像级错误，只在 S7 内部根据前序产物和审计报告重生一张替代图，不要编辑失败图。`
+- `请按照 paper-framework-figure-studio-pro skill 的要求，根据当前状态、state/project-state.json、next_prompt_registry、substage_guidance_registry 和文件扫描结果，只解析“继续/下一步”当前应执行的一个内部 unit；如果是 image-only，只生图不写文字；如果是 text-only，只写文本/审核/注册/提示词不生图。`

@@ -307,4 +307,68 @@ npx skills add https://github.com/owner/repo --skill skill-name -g -y
 - Source: best_practice
 - Pattern-Key: direct-url-install
 - See Also: LRN-20260516-009
+
+---
+
+## [LRN-20260516-011] best_practice
+
+**Priority**: medium
+**Status**: pending
+**Area**: install
+
+### 内容
+
+Anthropic 和 OpenAI 都在 `anthropics/skills` 和 `openai/skills` 仓库中维护了多个官方 skill。安装方式为 `npx skills add <owner/repo@skill-name> -g -y`。
+
+**知名官方仓库**：
+| 仓库 | 包含 skill | 安装量 |
+|------|-----------|--------|
+| `anthropics/skills` | docx, pptx, xlsx, codex 等 18 个 | 100K+ |
+| `openai/skills` | pdf, codex 等 43 个 | 6K+ |
+
+**安全评估注意**：
+- Anthropic 官方 skill 安全评估通常为 Safe/Low Risk
+- OpenAI 的 pdf skill 评估为 High Risk (Gen) / Med Risk (Snyk)，安装前应告知用户
+
+**分类决策**：当同类 skill 数量 ≥ 4 且有独立业务价值（如 Office 文档处理），应新增独立分类。
+
+### 元数据
+- Source: best_practice
+- Pattern-Key: official-skills-repos
+- See Also: LRN-20260516-008, LRN-20260516-010
+
+---
+
+## [LRN-20260516-012] best_practice
+
+**Priority**: high
+**Status**: pending
+**Area**: install
+
+### 内容
+
+**全量校验发现大量遗漏 skill**：实际 skills/ 目录有 79 个 skill，但 README 只记录了 54 个，遗漏 25 个。
+
+**遗漏原因分析**：
+1. 批量安装时（如 `npx skills add owner/repo@skill -g -y`），如果仓库包含多个 skill，可能只记录了主 skill
+2. 依赖自动安装的子 skill 未被记录
+3. 早期安装时未执行完整的闭环检查
+
+**遗漏 skill 清单**：
+- 学术科研：nature-reader, nature-response, nature-reviewer, nature-writing（4 个）
+- 组会 PPT：zuhui-paper-ppt, zuhui-ppt-master, zuhui-ppt-qa, zuhui-ppt-source-audit, zuhui-ppt-story-spine, zuhui-ppt-swiss-design, zuhui-ppt-triformat-export, zuhui-ppt-visual-score（8 个）
+- 浏览器与前端：web-search（1 个）
+- 深度学习：pytorch-patterns（已在 README 中）
+
+**新增分类决策**：zuhui-ppt-* 系列共 8 个 skill，功能聚焦（学术组会 PPT 制作），且有独立业务价值，新增「📊 组会 PPT」分类。
+
+**教训**：
+- 每次安装 skill 后必须立即执行闭环检查
+- 定期全量校验（建议每月一次）
+- 使用 `Get-ChildItem -Path skills -Directory` 快速扫描目录
+
+### 元数据
+- Source: best_practice
+- Pattern-Key: full-audit-missing-skills
+- See Also: LRN-20260516-008
 ---

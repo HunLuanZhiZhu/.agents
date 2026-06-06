@@ -1,0 +1,315 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img">
+<defs>
+  <linearGradient id="bluegrad" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#0b4ea2"/><stop offset="1" stop-color="#08275e"/></linearGradient>
+  <linearGradient id="greengrad" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#0f8f83"/><stop offset="1" stop-color="#00675f"/></linearGradient>
+  <linearGradient id="orangegrad" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#e08a00"/><stop offset="1" stop-color="#b95a00"/></linearGradient>
+  <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#1f2933" flood-opacity="0.12"/></filter>
+  <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 Z" fill="#00756b"/></marker>
+  <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#0b4ea2"/></marker>
+  <marker id="arrowOrange" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 Z" fill="#c66b00"/></marker>
+</defs>
+<style>
+  .bg { fill:#f7fbff; }
+  .title { font:700 42px 'Microsoft YaHei','Noto Sans CJK SC','Arial',sans-serif; fill:#06184a; letter-spacing:0; }
+  .subtitle { font:400 20px 'Microsoft YaHei','Noto Sans CJK SC','Arial',sans-serif; fill:#06184a; letter-spacing:0; }
+  .badge { fill:url(#bluegrad); stroke:#06184a; stroke-width:1.5; }
+  .badgetext { font:800 32px Arial,sans-serif; fill:#fff; letter-spacing:0; }
+  .band { fill:#ffffff; stroke:#0b4ea2; stroke-width:1.6; } .band.green { stroke:#00756b; } .band.orange { stroke:#dd7a00; }
+  .tile { stroke:none; filter:url(#shadow); } .tiletext { font:800 28px 'Microsoft YaHei','Noto Sans CJK SC','Arial',sans-serif; letter-spacing:0; }
+  .card { stroke:#0b4ea2; stroke-width:1.4; filter:url(#shadow); } .greenCard { stroke:#00756b; } .orangeCard { stroke:#dd7a00; }
+  .cardtitle { font:700 24px 'Microsoft YaHei','Noto Sans CJK SC','Arial',sans-serif; fill:#06184a; letter-spacing:0; }
+  .cardsmall { font:400 16px 'Microsoft YaHei','Noto Sans CJK SC','Arial',sans-serif; fill:#06184a; letter-spacing:0; }
+  .stepbox { stroke:#00756b; stroke-width:1.6; filter:url(#shadow); }
+  .steptop { font:800 31px Arial,'Microsoft YaHei',sans-serif; fill:#06184a; letter-spacing:0; }
+  .stepmid { font:700 16px 'Microsoft YaHei','Noto Sans CJK SC','Arial',sans-serif; fill:#06184a; letter-spacing:0; }
+  .steptiny { font:400 12.5px 'Microsoft YaHei','Noto Sans CJK SC','Arial',sans-serif; fill:#06184a; letter-spacing:0; }
+  .notebox { stroke:#00756b; stroke-width:1.7; stroke-dasharray:6 5; }
+  .notetitle { font:800 16px Arial,'Microsoft YaHei',sans-serif; fill:#06184a; letter-spacing:0; }
+  .notesmall { font:400 13px 'Microsoft YaHei','Noto Sans CJK SC','Arial',sans-serif; fill:#06184a; letter-spacing:0; }
+  .arrow { stroke:#00756b; stroke-width:5; fill:none; marker-end:url(#arrow); }
+  .down { stroke:#0b4ea2; stroke-width:2.2; stroke-dasharray:6 5; fill:none; marker-end:url(#arrowBlue); }
+  .artifactArrow { stroke:#c66b00; stroke-width:4; fill:none; marker-end:url(#arrowOrange); }
+</style>
+<rect class="bg" x="0" y="0" width="1600" height="900"/>
+<text x="28" y="48" class="title" text-anchor="start">
+<tspan x="28">璁烘枃妗嗘灦鍥惧伐浣滃娴佺▼鏋舵瀯</tspan>
+</text>
+<text x="30" y="88" class="subtitle" text-anchor="start">
+<tspan x="30">paper-framework-figure-studio-pro v3.1.6 skill锛歋0-S7銆佸浘鏂囧叡鐢熴€丼1鏂囨湰鏀硅繘銆?鍥炬帰绱?/tspan>
+</text>
+<rect class="badge" x="1432" y="12" width="144" height="58" rx="18"/>
+<text x="1504" y="51" class="badgetext" text-anchor="middle">
+<tspan x="1504">v3.1.6</tspan>
+</text>
+<rect class="band" x="20" y="106" width="1560" height="210" rx="12" ry="12" fill="#fbfdff"/>
+<rect class="tile" x="30" y="122" width="150" height="176" rx="14" ry="14" fill="url(#bluegrad)"/>
+<text x="105.0" y="171" class="tiletext" text-anchor="middle" style="fill:#ffffff">
+<tspan x="105.0">鍐呴儴</tspan>
+<tspan x="105.0" dy="1.25em">璧勬簮灞?/tspan>
+</text>
+<rect class="card bluecard" x="200" y="125" width="225" height="166" rx="12" ry="12" fill="#ffffff"/>
+<g fill="none" stroke="#0b4ea2" stroke-width="5" stroke-linejoin="round"><path d="M284.5 144 h42 l22 22 v58 h-64 z"/><path d="M326.5 144 v22 h22"/><path d="M302.5 172 h28"/><path d="M302.5 190 h36"/><path d="M302.5 208 h24"/></g>
+<text x="312.5" y="243" class="cardtitle" text-anchor="middle">
+<tspan x="312.5">Skill 鍏ュ彛</tspan>
+</text>
+<text x="312.5" y="276" class="cardsmall" text-anchor="middle">
+<tspan x="312.5">SKILL.md / agents</tspan>
+<tspan x="312.5" dy="1.25em">鍚姩瑙勫垯涓?stage 瑙勫垯</tspan>
+</text>
+<path class="down" d="M312 291 V335"/>
+<rect class="card bluecard" x="455" y="125" width="225" height="166" rx="12" ry="12" fill="#ffffff"/>
+<g fill="none" stroke="#0b4ea2" stroke-width="5" stroke-linejoin="round"><path d="M523.5 160 h34 l10 12 h44 v52 h-88 z"/><path d="M523.5 172 h88"/><path d="M583.5 182 h22 v42 h-22 z"/><path d="M591.5 192 h8"/><path d="M591.5 204 h8"/></g>
+<text x="567.5" y="243" class="cardtitle" text-anchor="middle">
+<tspan x="567.5">娌荤悊鍚堝悓</tspan>
+</text>
+<text x="567.5" y="276" class="cardsmall" text-anchor="middle">
+<tspan x="567.5">references / modules</tspan>
+<tspan x="567.5" dy="1.25em">鍗曟鎵ц涓庣姸鎬佺害鏉?/tspan>
+</text>
+<path class="down" d="M567 291 V335"/>
+<rect class="card bluecard" x="710" y="125" width="225" height="166" rx="12" ry="12" fill="#ffffff"/>
+<g fill="none" stroke="#0b4ea2" stroke-width="5" stroke-linejoin="round"><rect x="780.5" y="138" width="30" height="30" rx="5"/><rect x="834.5" y="138" width="30" height="30" rx="5"/><rect x="780.5" y="192" width="30" height="30" rx="5"/><rect x="834.5" y="192" width="30" height="30" rx="5"/><path d="M839.5 163 l10-10 l10 10"/></g>
+<text x="822.5" y="243" class="cardtitle" text-anchor="middle">
+<tspan x="822.5">鍥捐氨涓庨鏍奸€忛暅</tspan>
+</text>
+<text x="822.5" y="276" class="cardsmall" text-anchor="middle">
+<tspan x="822.5">subtype atlas / 椋庢牸鍒嗙被</tspan>
+<tspan x="822.5" dy="1.25em">鏁呬簨閫忛暅 / caption</tspan>
+</text>
+<path class="down" d="M822 291 V335"/>
+<rect class="card bluecard" x="965" y="125" width="225" height="166" rx="12" ry="12" fill="#ffffff"/>
+<g fill="none" stroke="#0b4ea2" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><rect x="1029.5" y="146" width="58" height="48" rx="6"/><path d="M1047.5 170 l-12 12 l12 12"/><path d="M1069.5 170 l12 12 l-12 12"/><rect x="1095.5" y="164" width="50" height="50" rx="6"/><path d="M1107.5 182 h24"/><path d="M1107.5 198 h16"/></g>
+<text x="1077.5" y="243" class="cardtitle" text-anchor="middle">
+<tspan x="1077.5">鑴氭湰宸ュ叿</tspan>
+</text>
+<text x="1077.5" y="276" class="cardsmall" text-anchor="middle">
+<tspan x="1077.5">state / validators</tspan>
+<tspan x="1077.5" dy="1.25em">release checks</tspan>
+</text>
+<path class="down" d="M1077 291 V335"/>
+<rect class="card bluecard" x="1220" y="125" width="225" height="166" rx="12" ry="12" fill="#ffffff"/>
+<g fill="none" stroke="#0b4ea2" stroke-width="5" stroke-linejoin="round"><rect x="1300.5" y="140" width="54" height="72" rx="6"/><path d="M1318.5 140 c0-12 24-12 24 0 h14 v14 h-52 v-14 z"/><path d="M1317.5 176 h24"/><path d="M1317.5 194 h24"/><rect x="1366.5" y="160" width="28" height="52" rx="4"/></g>
+<text x="1332.5" y="243" class="cardtitle" text-anchor="middle">
+<tspan x="1332.5">妯℃澘绀轰緥</tspan>
+</text>
+<text x="1332.5" y="276" class="cardsmall" text-anchor="middle">
+<tspan x="1332.5">prompts / examples</tspan>
+<tspan x="1332.5" dy="1.25em">publish 璧勬枡</tspan>
+</text>
+<path class="down" d="M1332 291 V335"/>
+<rect class="band green" x="20" y="335" width="1560" height="170" rx="12" ry="12" fill="#fbfffd"/>
+<rect class="tile" x="30" y="357" width="150" height="128" rx="14" ry="14" fill="url(#greengrad)"/>
+<text x="105.0" y="406" class="tiletext" text-anchor="middle" style="fill:#ffffff">
+<tspan x="105.0">璁烘枃鐞嗚В涓?/tspan>
+<tspan x="105.0" dy="1.25em">鍥惧舰绛栫暐</tspan>
+</text>
+<rect class="card greenCard" x="200" y="355" width="385" height="130" rx="12" ry="12" fill="#ffffff"/>
+<g fill="none" stroke="#00756b" stroke-width="5" stroke-linejoin="round"><path d="M220 380 h46 l24 24 v62 h-70 z"/><path d="M266 380 v24 h24"/><circle cx="276" cy="444" r="22"/><path d="M292 460 l22 22"/><path d="M238 412 h26"/><path d="M238 430 h20"/></g>
+<text x="318" y="405" class="cardtitle" text-anchor="start">
+<tspan x="318">璁烘枃浜嬪疄搴曞骇</tspan>
+</text>
+<text x="318" y="437" class="cardsmall" text-anchor="start">
+<tspan x="318">闂銆佹柟娉曘€佽础鐚?/tspan>
+<tspan x="318" dy="1.25em">杈撳叆杈撳嚭銆佸叕寮忋€佽瘉鎹敋鐐?/tspan>
+</text>
+<rect class="card greenCard" x="625" y="355" width="420" height="130" rx="12" ry="12" fill="#ffffff"/>
+<g fill="none" stroke="#00756b" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M633 460 C669 430, 697 482, 735 444" stroke-dasharray="8 8"/><path d="M641 400 c0-18 28-18 28 0 c0 18-14 28-14 28 s-14-10-14-28z"/><circle cx="655" cy="400" r="5" fill="#00756b"/><path d="M705 384 l0 36"/><path d="M705 384 h32 l-8 10 l8 10 h-32"/></g>
+<text x="743" y="405" class="cardtitle" text-anchor="start">
+<tspan x="743">鍥炬枃鍏辩敓</tspan>
+</text>
+<text x="743" y="437" class="cardsmall" text-anchor="start">
+<tspan x="743">鍥炬壙杞界粨鏋勫拰璇箟鍥炬爣</tspan>
+<tspan x="743" dy="1.25em">caption/legend 瑙ｉ噴绗﹀彿</tspan>
+<tspan x="743" dy="1.25em">鍑忓皯鍥惧唴鏂囧瓧</tspan>
+</text>
+<rect class="card greenCard" x="1080" y="355" width="450" height="130" rx="12" ry="12" fill="#ffffff"/>
+<g fill="none" stroke="#00756b" stroke-width="5" stroke-linejoin="round"><rect x="1084" y="384" width="34" height="34" rx="5"/><rect x="1158" y="384" width="34" height="34" rx="5"/><rect x="1084" y="448" width="34" height="34" rx="5"/><rect x="1158" y="448" width="34" height="34" rx="5"/><path d="M1118 401 h40"/><path d="M1175 418 v30"/><path d="M1118 465 h40"/></g>
+<text x="1198" y="405" class="cardtitle" text-anchor="start">
+<tspan x="1198">椋庢牸銆佹晠浜嬩笌 S7 缁堝</tspan>
+</text>
+<text x="1198" y="437" class="cardsmall" text-anchor="start">
+<tspan x="1198">S2 鍖呭惈鏁呬簨鎬ц崏鍥?/tspan>
+<tspan x="1198" dy="1.25em">S5 骞插噣姝ｅ紡鍊欓€夊浘</tspan>
+<tspan x="1198" dy="1.25em">S7 妫€鏌ュ浘 + caption</tspan>
+</text>
+<path class="arrow" d="M585 420 L615 420"/>
+<path class="arrow" d="M1045 420 L1070 420"/>
+<rect class="band green" x="20" y="520" width="1560" height="205" rx="12" ry="12" fill="#fbfffd"/>
+<rect class="tile" x="30" y="545" width="150" height="150" rx="14" ry="14" fill="url(#greengrad)"/>
+<text x="105.0" y="594" class="tiletext" text-anchor="middle" style="fill:#ffffff">
+<tspan x="105.0">S0-S7</tspan>
+<tspan x="105.0" dy="1.25em">鐘舵€佸寲娴佺▼</tspan>
+</text>
+<rect class="stepbox" x="200" y="548" width="138" height="96" rx="10" ry="10" fill="#eef7ff"/>
+<text x="269.0" y="577" class="steptop" text-anchor="middle">
+<tspan x="269.0">S0</tspan>
+</text>
+<text x="269.0" y="608" class="stepmid" text-anchor="middle">
+<tspan x="269.0">璁烘枃搴曞骇</tspan>
+</text>
+<text x="269.0" y="632" class="steptiny" text-anchor="middle">
+<tspan x="269.0">浜嬪疄鏉ユ簮</tspan>
+</text>
+<path class="arrow" d="M345 596 L350 596"/>
+<rect class="stepbox" x="358" y="548" width="138" height="96" rx="10" ry="10" fill="#eef7ff"/>
+<text x="427.0" y="577" class="steptop" text-anchor="middle">
+<tspan x="427.0">S1</tspan>
+</text>
+<text x="427.0" y="608" class="stepmid" text-anchor="middle">
+<tspan x="427.0">鍥剧瓥鐣?/tspan>
+</text>
+<text x="427.0" y="632" class="steptiny" text-anchor="middle">
+<tspan x="427.0">鍊欓€夊崱+閫夋嫨</tspan>
+</text>
+<path class="arrow" d="M503 596 L508 596"/>
+<rect class="stepbox" x="516" y="548" width="138" height="96" rx="10" ry="10" fill="#fff4cc"/>
+<text x="585.0" y="577" class="steptop" text-anchor="middle">
+<tspan x="585.0">S2</tspan>
+</text>
+<text x="585.0" y="608" class="stepmid" text-anchor="middle">
+<tspan x="585.0">鑽夊浘鎺㈢储</tspan>
+</text>
+<text x="585.0" y="632" class="steptiny" text-anchor="middle">
+<tspan x="585.0">鑷冲皯 8 涓柟鍚?/tspan>
+</text>
+<path class="arrow" d="M661 596 L666 596"/>
+<rect class="stepbox" x="674" y="548" width="138" height="96" rx="10" ry="10" fill="#eef8ee"/>
+<text x="743.0" y="577" class="steptop" text-anchor="middle">
+<tspan x="743.0">S3</tspan>
+</text>
+<text x="743.0" y="608" class="stepmid" text-anchor="middle">
+<tspan x="743.0">鏂瑰悜閫夋嫨</tspan>
+</text>
+<text x="743.0" y="632" class="steptiny" text-anchor="middle">
+<tspan x="743.0">鏀舵潫涓荤嚎</tspan>
+</text>
+<path class="arrow" d="M819 596 L824 596"/>
+<rect class="stepbox" x="832" y="548" width="138" height="96" rx="10" ry="10" fill="#eef8ee"/>
+<text x="901.0" y="577" class="steptop" text-anchor="middle">
+<tspan x="901.0">S4</tspan>
+</text>
+<text x="901.0" y="608" class="stepmid" text-anchor="middle">
+<tspan x="901.0">鍊欓€?brief</tspan>
+</text>
+<text x="901.0" y="632" class="steptiny" text-anchor="middle">
+<tspan x="901.0">鍊欓€夊悎鍚?/tspan>
+</text>
+<path class="arrow" d="M977 596 L982 596"/>
+<rect class="stepbox" x="990" y="548" width="138" height="96" rx="10" ry="10" fill="#fff4cc"/>
+<text x="1059.0" y="577" class="steptop" text-anchor="middle">
+<tspan x="1059.0">S5</tspan>
+</text>
+<text x="1059.0" y="608" class="stepmid" text-anchor="middle">
+<tspan x="1059.0">鍊欓€夊浘</tspan>
+</text>
+<text x="1059.0" y="632" class="steptiny" text-anchor="middle">
+<tspan x="1059.0">姝ｅ紡鏂规</tspan>
+</text>
+<path class="arrow" d="M1135 596 L1140 596"/>
+<rect class="stepbox" x="1148" y="548" width="138" height="96" rx="10" ry="10" fill="#f5ecff"/>
+<text x="1217.0" y="577" class="steptop" text-anchor="middle">
+<tspan x="1217.0">S6</tspan>
+</text>
+<text x="1217.0" y="608" class="stepmid" text-anchor="middle">
+<tspan x="1217.0">鏈€缁堝浘+璇存槑</tspan>
+</text>
+<text x="1217.0" y="632" class="steptiny" text-anchor="middle">
+<tspan x="1217.0">鍥炬枃鍖?/tspan>
+</text>
+<path class="arrow" d="M1293 596 L1298 596"/>
+<rect class="stepbox" x="1306" y="548" width="138" height="96" rx="10" ry="10" fill="#ffeaf3"/>
+<text x="1375.0" y="577" class="steptop" text-anchor="middle">
+<tspan x="1375.0">S7</tspan>
+</text>
+<text x="1375.0" y="608" class="stepmid" text-anchor="middle">
+<tspan x="1375.0">鍥炬枃缁堝</tspan>
+</text>
+<text x="1375.0" y="632" class="steptiny" text-anchor="middle">
+<tspan x="1375.0">閫氳繃鎴栦慨澶?/tspan>
+</text>
+<path class="down" d="M269.0 505 V545"/>
+<path class="down" d="M427.0 505 V545"/>
+<path class="down" d="M585.0 505 V545"/>
+<path class="down" d="M743.0 505 V545"/>
+<path class="down" d="M901.0 505 V545"/>
+<path class="down" d="M1059.0 505 V545"/>
+<path class="down" d="M1217.0 505 V545"/>
+<path class="down" d="M1375.0 505 V545"/>
+<rect class="notebox" x="440" y="660" width="230" height="48" rx="10" ry="10" fill="#fffdf7"/>
+<text x="458" y="685" class="notetitle" text-anchor="start">
+<tspan x="458">S2</tspan>
+</text>
+<text x="458" y="708" class="notesmall" text-anchor="start">
+<tspan x="458">8 寮犱綆淇濈湡鎵嬬粯鑽夊浘</tspan>
+<tspan x="458" dy="1.25em">鑷冲皯 2 寮犺创杩戣鏂囩殑鏁呬簨</tspan>
+</text>
+<rect class="notebox" x="690" y="660" width="250" height="48" rx="10" ry="10" fill="#fffdf7"/>
+<text x="708" y="685" class="notetitle" text-anchor="start">
+<tspan x="708">S4/S5</tspan>
+</text>
+<text x="708" y="708" class="notesmall" text-anchor="start">
+<tspan x="708">2 鏂瑰悜 x 3 椋庢牸澶勭悊</tspan>
+<tspan x="708" dy="1.25em">caption 涓庣鍙峰垎宸?/tspan>
+</text>
+<rect class="notebox" x="960" y="660" width="250" height="48" rx="10" ry="10" fill="#fffdf7"/>
+<text x="978" y="685" class="notetitle" text-anchor="start">
+<tspan x="978">S6</tspan>
+</text>
+<text x="978" y="708" class="notesmall" text-anchor="start">
+<tspan x="978">鏈€缁堝浘 + 鏍囬</tspan>
+<tspan x="978" dy="1.25em">caption / legend / 姝ｆ枃寮曠敤</tspan>
+</text>
+<rect class="notebox" x="1230" y="660" width="290" height="48" rx="10" ry="10" fill="#fffdf7"/>
+<text x="1248" y="685" class="notetitle" text-anchor="start">
+<tspan x="1248">S7</tspan>
+</text>
+<text x="1248" y="708" class="notesmall" text-anchor="start">
+<tspan x="1248">鏈夎竟鐣岀粓瀹?/tspan>
+<tspan x="1248" dy="1.25em">妯″瀷 / 鏁板 / 绠ご / 棰滆壊 / 鍥炬爣</tspan>
+</text>
+<rect class="band orange" x="20" y="742" width="1560" height="126" rx="12" ry="12" fill="#fffdfa"/>
+<rect class="tile" x="30" y="758" width="150" height="94" rx="14" ry="14" fill="url(#orangegrad)"/>
+<text x="105.0" y="807" class="tiletext" text-anchor="middle" style="fill:#ffffff">
+<tspan x="105.0">杩愯涓?/tspan>
+<tspan x="105.0" dy="1.25em">浜х墿灞?/tspan>
+</text>
+<rect class="card orangeCard" x="200" y="760" width="300" height="90" rx="12" ry="12" fill="#ffffff"/>
+<g fill="none" stroke="#d67a00" stroke-width="5" stroke-linecap="round"><ellipse cx="258" cy="827" rx="30" ry="12"/><path d="M228 827 v42 c0 7 13 12 30 12s30-5 30-12v-42"/><path d="M228 848 c0 7 13 12 30 12s30-5 30-12"/></g>
+<text x="318" y="810" class="cardtitle" text-anchor="start">
+<tspan x="318">椤圭洰鐘舵€?/tspan>
+</text>
+<text x="318" y="842" class="cardsmall" text-anchor="start">
+<tspan x="318">state/project-state.json</tspan>
+<tspan x="318" dy="1.25em">S0-S7 manifest</tspan>
+</text>
+<rect class="card orangeCard" x="540" y="760" width="300" height="90" rx="12" ry="12" fill="#ffffff"/>
+<g fill="none" stroke="#d67a00" stroke-width="5" stroke-linejoin="round"><path d="M550 843 h26 l10 18 h24 l10-18 h26 v46 h-96 z"/><path d="M562 843 l14-52 h44 l14 52"/><path d="M578 821 h40"/></g>
+<text x="658" y="810" class="cardtitle" text-anchor="start">
+<tspan x="658">杈撳叆鏉愭枡</tspan>
+</text>
+<text x="658" y="842" class="cardsmall" text-anchor="start">
+<tspan x="658">PDF / LaTeX / 鎶ュ憡</tspan>
+<tspan x="658" dy="1.25em">鍙傝€冨浘 / 鐢ㄦ埛鍋忓ソ</tspan>
+</text>
+<rect class="card orangeCard" x="880" y="760" width="300" height="90" rx="12" ry="12" fill="#ffffff"/>
+<g fill="none" stroke="#d67a00" stroke-width="5" stroke-linejoin="round"><path d="M938 783 l52 24 l-52 24 l-52-24 z"/><path d="M886 829 l52 24 l52-24"/><path d="M886 851 l52 24 l52-24"/></g>
+<text x="998" y="810" class="cardtitle" text-anchor="start">
+<tspan x="998">姝ラ杈撳嚭</tspan>
+</text>
+<text x="998" y="842" class="cardsmall" text-anchor="start">
+<tspan x="998">outputs/S0...S7</tspan>
+<tspan x="998" dy="1.25em">鍥剧墖銆乧aption銆乤udit</tspan>
+</text>
+<rect class="card orangeCard" x="1220" y="760" width="330" height="90" rx="12" ry="12" fill="#ffffff"/>
+<g fill="none" stroke="#d67a00" stroke-width="5" stroke-linecap="round"><circle cx="1278" cy="827" r="30"/><circle cx="1278" cy="827" r="12"/><path d="M1278 777 v16M1278 861 v16M1228 827 h16M1312 827 h16M1243 792 l12 12M1301 850 l12 12M1313 792 l-12 12M1255 850 l-12 12"/></g>
+<text x="1338" y="810" class="cardtitle" text-anchor="start">
+<tspan x="1338">璐ㄩ噺妫€鏌?/tspan>
+</text>
+<text x="1338" y="842" class="cardsmall" text-anchor="start">
+<tspan x="1338">璁烘枃蹇犲疄搴?+ 鍥炬枃鍏辩敓</tspan>
+<tspan x="1338" dy="1.25em">绠ご/棰滆壊/鍥炬爣绮惧噯</tspan>
+</text>
+<path class="artifactArrow" d="M502 805 L530 805"/>
+<path class="artifactArrow" d="M842 805 L870 805"/>
+<path class="artifactArrow" d="M1182 805 L1210 805"/>
+</svg>
