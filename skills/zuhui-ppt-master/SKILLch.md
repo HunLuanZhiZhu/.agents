@@ -4,10 +4,12 @@
 
 用于制作高级感中文组会论文汇报 PPT。默认同时保留三种产物：
 
-1. 可编辑 `.pptx`
-2. Guizang 瑞士风横向翻页 `.html`
-3. 从 HTML 导出的 `.pdf`
+1. Guizang 瑞士风横向翻页 `.html`（核心产物/canonical source）
+2. 从 HTML 导出的 `.pdf`
+3. 可编辑 `.pptx`（截图型，保持与 HTML 视觉一致）
 4. 讲稿备注和 QA 报告
+
+**HTML First 原则**：HTML 是核心产物，PPTX 和 PDF 是 HTML 的导出副产物。当产物一致性有冲突时，以 HTML 为准。为保持一致性，可以牺牲 PPTX 的原生可编辑性（默认采用截图型 PPTX）。
 
 它不是替代 `guizang-ppt-skill` 或 `nature-paper2ppt`，而是把它们组合起来：
 
@@ -27,10 +29,10 @@
 
 ## 必须做到
 
-- 最终保留 PPTX / HTML / PDF 三种产物。
-- HTML 必须继承 Guizang Swiss 风格，优先用 `template-swiss.html`。
+- 最终保留 HTML / PDF / PPTX 三种产物。HTML 是 canonical source，PPTX 和 PDF 源自 HTML。
+- HTML 必须继承 Swiss 风格，优先用本 skill 目录下的 `assets/template-swiss.html`。
 - 如果旧版本视觉更好，要把旧版本当作视觉金标准。本工作流优先继承 v1 的 Guizang Swiss `aris-*` 风格：IKB 蓝封面、黑底 statement、细网格、大标题、干净图页。
-- PPTX 默认要可编辑，并尽量接近 HTML 的视觉层级。若用户已经否定可编辑 PPTX 的视觉效果、并明确更重视 v1/浏览器视觉保真，可以使用截图型 PPTX，但必须在 QA 报告里说明可编辑性限制。
+- PPTX 默认采用截图型（visual-fidelity mode），保证与 HTML 视觉一致。仅当用户明确要求可编辑性优先时，才尝试原生可编辑 PPTX。
 - 大图页图片要足够大；论文图表是证据，不是装饰。
 - 生成脚本、讲稿和 QA 报告要保留，方便后续迭代。
 - PPT 页面必须给听众看，不要把给 agent 自己看的阅读地图、制作思路、选题理由放进正文页；这类内容放讲稿或构建备注。
@@ -78,6 +80,8 @@
 - 为什么重要？
 - 边界或局限是什么？
 
+**审阅门控**：Phase 2 完成后，`slide_plan_v{VERSION}.md` 必须先审阅确认再进入 Phase 3。检查：页数是否合适、每页内容是否充足、图片分配是否合理、叙事弧是否连贯。不要带着未审阅的 slide_plan 进入视觉设计阶段。
+
 ### 3. 瑞士风视觉计划
 
 使用 `zuhui-ppt-swiss-design`。
@@ -90,9 +94,9 @@
 
 从同一份内容模型生成：
 
-- PPTX；
-- 注入 Guizang `template-swiss.html` 的 HTML；
+- HTML（注入本 skill 目录下的 `assets/template-swiss.html`，作为 canonical source）；
 - 从 HTML 打印出的 PDF；
+- PPTX（默认截图型，保持视觉一致）；
 - 讲稿和 QA。
 
 如果浏览器 HTML 明显比原生 PPTX 复刻更接近 v1 金标准，优先保留视觉系统，并在 QA 中披露截图型 PPTX 降级。

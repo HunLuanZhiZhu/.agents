@@ -4,20 +4,20 @@
 
 从同一份内容模型导出并保留三种产物：
 
-- `.pptx`：方便编辑；
-- `.html`：Guizang Swiss 横向网页演示；
-- `.pdf`：方便审阅、打印和归档。
+- `.html`：Swiss 横向网页演示（核心产物/canonical source）；
+- `.pdf`：从 HTML 导出，方便审阅、打印和归档；
+- `.pptx`：默认截图型，方便编辑。
 
-用户要求三种产物时，HTML/PDF 不能当作可选项。
+HTML 是 canonical source，PPTX 和 PDF 是副产物。HTML/PDF 不能当作可选项。
 
 ## 构建顺序
 
 推荐：
 
 1. 生成内容模型和 slide specs；
-2. 生成可编辑 PPTX；
-3. 把 slide sections 注入 Guizang `template-swiss.html`；
-4. 从 HTML 导出 PDF；
+2. 生成 HTML（注入 `zuhui-ppt-master/assets/template-swiss.html`，作为 canonical source）；
+3. 从 HTML 导出 PDF；
+4. 从 HTML 生成 PPTX（默认截图型）；
 5. 生成讲稿和 QA。
 
 三种输出必须由同一份 slide specs 驱动，避免内容漂移。
@@ -35,13 +35,14 @@
 
 ## HTML 规则
 
-- 优先使用 `guizang-ppt-skill/assets/template-swiss.html`；
+- 优先使用 `zuhui-ppt-master/assets/template-swiss.html`；
 - 替换标题占位符；
 - 只把真实 slide 插入 deck 区域；
 - 每页必须有 `data-layout`；
 - `data-animate` 要和版式匹配；
 - 图片放 `assets/`；
-- 为 PDF 导出注入必要 print CSS。
+- 为 PDF 导出注入必要 print CSS；
+- 如果有数学公式，在 `<head>` 中加入 KaTeX CDN 引用（见 `zuhui-ppt-swiss-design` KaTeX 公式渲染部分）。
 
 ## PDF 规则
 

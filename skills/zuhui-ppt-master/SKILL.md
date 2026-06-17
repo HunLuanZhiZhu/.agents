@@ -9,10 +9,12 @@ description: Orchestrate premium Chinese journal-club and group-meeting paper pr
 
 Build an advanced, high-density, visually premium Chinese group-meeting presentation from a scientific paper. The default deliverable is a synchronized package:
 
-1. editable `.pptx`,
-2. Swiss International-style horizontal `.html`,
-3. printable `.pdf` exported from the HTML,
+1. Swiss International-style horizontal `.html` (canonical source),
+2. printable `.pdf` exported from the HTML,
+3. editable `.pptx` for local modification,
 4. speaker notes and QA report.
+
+**HTML First principle**: The HTML is the canonical/core deliverable. PPTX and PDF are derived outputs from the HTML. When consistency between formats is in conflict, the HTML wins. PPTX native editability may be sacrificed to maintain visual fidelity with the HTML.
 
 ## Project Initialization
 
@@ -260,10 +262,11 @@ OCR, full supplementary extraction, all-page high-resolution rendering, all-slid
 
 ### Must Preserve
 
-- Keep all three final products: PPTX, HTML, and PDF.
+- Keep all three final products: HTML (canonical), PDF, and PPTX.
+- The HTML is the canonical source. PPTX and PDF are derived from the HTML. When consistency between formats is in conflict, the HTML wins.
 - Keep the HTML visually rooted in Swiss International style: `template-swiss.html`, IKB blue (default), dark chapter/statement pages, registered `Sxx` layouts, and large image hero pages.
 - When `VISUAL_REF` points to a prior approved version, treat it as the visual gold source. The default house style is: IKB cover, dark statement pages, thin Swiss typography, sparse-but-sharp cards, and clean evidence figure pages.
-- Keep the PPTX editable and close to the HTML visual system by default. If the user explicitly prioritizes browser-rendered visual fidelity after rejecting editable-looking PPTX attempts, a screenshot-backed PPTX is acceptable only when the QA report states the editability limitation.
+- Keep the PPTX as close to the HTML visual system as possible. By default, the PPTX should be screenshot-backed (visual-fidelity mode) to guarantee consistency with the HTML canonical source. Native editable PPTX is only preferred when the user explicitly requires editability over visual fidelity.
 - Keep a reproducible script or build notes so a later version can be regenerated.
 - Keep slide content audience-facing. Planning scaffolds, reading maps for the agent, and "why this deck matters" notes belong in speaker notes or build notes, not on slides.
 - Use Chinese as the visible slide language. If an English professional term is necessary, write it as `中文解释（English term）`; do not leave standalone English phrases in titles, cards, captions, footers, or section labels.
@@ -314,6 +317,8 @@ Deliverables from this phase:
 
 Every non-transition slide must answer: what claim, what evidence, why it matters, and what boundary or caveat applies.
 
+**Review gate**: After Phase 2 completes, the `slide_plan_v{VERSION}.md` MUST be reviewed and confirmed before proceeding to Phase 3. Verify: page count is appropriate, every page has sufficient content, figure assignments are reasonable, and the narrative arc is coherent. Do not enter Phase 3 (visual design) with an un-reviewed slide plan.
+
 ### Phase 3 — Swiss Visual Plan
 
 Use `zuhui-ppt-swiss-design`.
@@ -334,13 +339,13 @@ Use `zuhui-ppt-triformat-export`.
 
 Build from one content model to avoid drift:
 
-- PPTX for editable delivery,
-- HTML by injecting slide sections into `template-swiss.html` (from `guizang-ppt-skill/assets/` if available, or a local copy),
+- HTML by injecting slide sections into `template-swiss.html` (from `zuhui-ppt-master/assets/`), serving as the canonical source,
 - PDF by printing the HTML with the same slide count,
+- PPTX for editable delivery (screenshot-backed by default for visual fidelity),
 - notes and QA report.
 
-The HTML is the visual gold source; the PPTX should track the same hierarchy and large-image intent.
-When browser-rendered HTML is much better than native PPTX recreation, preserve the visual system first and disclose any screenshot-backed PPTX fallback in the QA report.
+The HTML is the canonical source; PPTX and PDF must track the same hierarchy and large-image intent.
+When browser-rendered HTML is much better than native PPTX recreation, use screenshot-backed PPTX as the default approach. Disclose the PPTX build method in the QA report.
 
 ### Phase 5 — QA and Iteration
 

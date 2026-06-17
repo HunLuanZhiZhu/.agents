@@ -79,17 +79,21 @@ Add any user-specific banned phrase from feedback.
 
 ## Rendered QA
 
-If a reliable renderer is available:
+**Standard visual review pipeline** (default):
 
-- render PDF pages or slide screenshots,
-- create a contact sheet,
-- inspect image size, text overflow, missing images, rhythm, and page-2/title overlap,
-- inspect whether figure crops are clean image-only crops,
-- inspect whether visible English appears without immediate Chinese translation,
-- repair weak slides.
+1. **HTML → PDF**: Use headless browser (Chrome/Edge headless) to print the HTML to PDF (`@page { size: 13.333in 7.5in; margin: 0; }`)
+2. **PDF → per-page images**: Use PyMuPDF to split the PDF into individual PNG images, one per slide (1920x1080 resolution)
+3. **Per-page visual review**: Review each page image individually for:
+   - image size, text overflow, missing images, rhythm, and page-2/title overlap,
+   - whether figure crops are clean image-only crops,
+   - whether visible English appears without immediate Chinese translation,
+   - repair weak slides.
+
+If a reliable renderer is available:
+- Follow the standard pipeline above.
+- Create a contact sheet from the per-page images.
 
 If no renderer is available:
-
 - do package-level validation,
 - inspect extracted assets/contact sheets,
 - explicitly report that pixel-level rendered QA was not performed.

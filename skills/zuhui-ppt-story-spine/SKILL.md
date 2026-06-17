@@ -90,15 +90,17 @@ When planning each slide, first assign it an archetype. The archetype determines
 
 - **Content**: one dominant figure or table crop that carries the main evidence
 - **Layout ratio**: 60-75% visual area, 20-30% interpretation rail, short takeaway band at bottom
-- **Sxx mapping**: S22 Image Hero (if figure is wide) or S09 (if figure needs statement context)
+- **Sxx mapping**: S22 Image Hero (if figure is wide AND information-dense) or S09 (if figure needs statement context). See Figure Information Density Assessment in `zuhui-ppt-swiss-design` for when S22 is appropriate.
 - **Rule**: let the figure own the page; keep annotation rail narrow and short; move secondary explanation to speaker notes or a follow-up slide
+- **Warning**: Do NOT assign Hero Figure Result archetype to low-information figures (simple bar charts, single-line plots, single-panel schematics). For low-information figures, use Text-Led Synthesis or Comparison/Table instead.
 
 ### Workflow / Method
 
 - **Content**: process diagram, architecture, or system flow
 - **Layout ratio**: full-width or near-full-width process visual + compact annotation strip
-- **Sxx mapping**: S17 System Diagram or S11 Horizontal Timeline
-- **Rule**: do not split into two equal text/diagram columns; the diagram is the slide
+- **Sxx mapping**: S22 (if wide), S17 (system diagram), S11 (horizontal timeline for step-by-step)
+- **Rule**: Use the widest layout available; keep explanatory text to 1-2 lines per step
+- **SVG consideration**: If the paper's original workflow/architecture diagram is too low-resolution, cluttered, or contains untranslated English labels, consider re-drawing it as an inline SVG (see `zuhui-ppt-swiss-design` SVG Logic Diagram Guide). Mark with `[SVG: 描述]` in the visual plan.
 
 ### Comparison / Table
 
@@ -206,6 +208,50 @@ For a quick or unspecified request, prefer 10-14 slides. Expand beyond 16 slides
 - symmetric 1:1 figure-text split when one side clearly dominates,
 - shrinking a dense figure into a tiny slot to preserve layout symmetry.
 
-## Output
+## Slide Plan Output Format
 
-Produce a slide plan and speaker-note outline in `{OUTPUT_DIR}/slide_plan_v{VERSION}.md`. It should be ready for `zuhui-ppt-swiss-design` to assign registered Swiss layouts and for `zuhui-ppt-triformat-export` to build outputs.
+Produce a slide plan and speaker-note outline in `{OUTPUT_DIR}/slide_plan_v{VERSION}.md`. Each page is separated by `---`. It should be ready for `zuhui-ppt-swiss-design` to assign registered Swiss layouts and for `zuhui-ppt-triformat-export` to build outputs.
+
+### Format
+
+```markdown
+<!-- page_type: cover|chapter|content|ending -->
+<!-- page_number: N -->
+
+## [结论式中文标题]
+
+**Narrative role**: Hook|Tension|Core Insight|Mechanism|Evidence|Implications|Coda
+**Detail density**: light|normal|rich
+**Archetype**: Hero Figure Result|Workflow/Method|Comparison/Table|Text-Led Synthesis|Cover|Chapter Transition
+**Section**: [章节名]
+
+**Core claim**: [一句话核心论点]
+
+**Slide points**:
+- [要点 1，含具体数据]
+- [要点 2]
+- [要点 3]
+
+**Visual plan**:
+- [CHART: 柱状图对比各方法表现]
+- [DIAGRAM: 方法流程图]
+- [SVG: 架构关系图]
+- [TABLE: 结果对比表]
+- [[FIG:fig_007_p9_page]] — 简短说明该图证明什么
+
+**Proof object**: `assets/fig_xxx.png` — [简短说明]
+**Caption**: [图注/说明]
+**Caveat**: [证据不能证明什么]
+**Recommended layout**: S22|S17|S21|S09|S01|S03
+
+**Speaker note**: [演讲要点，包括过渡语、时间提示、强调重点]
+```
+
+### Rules
+- `<!-- page_type: ... -->` HTML comment marks each page's type.
+- Every non-transition page must have a claim, proof object, interpretation, and caveat.
+- `[CHART: ...]`, `[DIAGRAM: ...]`, `[SVG: ...]`, `[TABLE: ...]` markers are for downstream Strategist/Executor, not rendered literally.
+- `[[FIG:fig_id]]` tokens must reference real figure IDs from the source audit. One per line, with a short description.
+- Speaker notes should include transition phrases, timing cues, and emphasis points.
+- Detail density: `light` = 1-2 points, `normal` = 2-4 points, `rich` = 4-6 points.
+- After the slide plan is complete, it MUST be reviewed before proceeding to Phase 3 (Swiss Visual Design).

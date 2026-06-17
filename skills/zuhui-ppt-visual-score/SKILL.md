@@ -71,11 +71,11 @@ Does the deck consistently follow the Swiss International typography rules?
 
 | Score | Criteria |
 |-------|----------|
-| 5 | All sans-serif; weight ladder correct (larger=lighter); Chinese titles properly sized; minimum sizes respected; no double padding; dual-constraint font sizing everywhere |
-| 4 | Mostly correct; 1-2 slides have slightly off weight or sizing |
-| 3 | Several slides have inconsistent weight ladder; some titles too large or too small; a few body text blocks below minimum size |
-| 2 | Weight ladder frequently violated; serif fonts appear; many titles oversized or undersized; double padding visible on multiple pages |
-| 1 | No consistent typography system; mixed serif/sans-serif; random font sizes; no weight hierarchy |
+| 5 | All sans-serif; weight ladder correct (larger=lighter); Chinese titles properly sized; minimum sizes respected; no double padding; dual-constraint font sizing everywhere; per-page adjustments (Pass 2) improve readability without breaking rules |
+| 4 | Mostly correct; 1-2 slides have slightly off weight or sizing; per-page adjustments mostly appropriate |
+| 3 | Several slides have inconsistent weight ladder; some titles too large or too small; per-page adjustments missing or inadequate |
+| 2 | Weight ladder frequently violated; serif fonts appear; many titles oversized or undersized; no evidence of per-page size tuning |
+| 1 | No consistent typography system; mixed serif/sans-serif; random font sizes; no weight hierarchy; no per-page adjustment |
 
 Per-slide check:
 - All fonts sans-serif? (no serif on Swiss decks)
@@ -109,11 +109,11 @@ Is each slide meaningfully filled without being overcrowded or sparse?
 
 | Score | Criteria |
 |-------|----------|
-| 5 | Every slide has top anchor + dominant middle + bottom anchor; dense evidence slides use figure hero; no sparse 3-card pages with one-sentence cards; no unstructured blank areas |
+| 5 | Every slide has top anchor + dominant middle + bottom anchor; dense evidence slides use figure hero; no sparse 3-card pages with one-sentence cards; no unstructured blank areas; at least 2-4 concrete info points per page; every card has substantive content |
 | 4 | Most slides well-filled; 1-2 slides could use an additional evidence layer or metric callout |
-| 3 | Some sparse slides with tiny figures or short bullets in one corner; some slides slightly overcrowded with too many bullets |
-| 2 | Multiple sparse slides with large blank areas; or multiple overcrowded slides where text and figures compete |
-| 1 | Many empty slides or many overcrowded slides; deck feels either half-finished or unreadable |
+| 3 | Some sparse slides with tiny figures or short bullets in one corner; some slides slightly overcrowded; a few "one-sentence cards" present |
+| 2 | Multiple sparse slides with large blank areas; or multiple overcrowded slides; one-sentence cards common; pages lack substantive content |
+| 1 | Many empty slides or many overcrowded slides; deck feels half-finished; most cards empty or one-sentence |
 
 Per-slide check:
 - Top anchor present (kicker or section label)?
@@ -143,11 +143,15 @@ Per-slide check:
 
 ## Scoring Procedure
 
-### Step 1 — Render or extract slide visuals
+### Step 1 — Render slides to per-page images via standard pipeline
+
+**Standard pipeline** (default):
+1. **HTML → PDF**: Use headless browser (Chrome/Edge headless) to print the HTML to PDF
+2. **PDF → per-page images**: Use PyMuPDF to split the PDF into individual PNG images (1920x1080, one per slide)
+3. Create a contact sheet with all slides in sequence.
 
 If a renderer is available:
-- Render each slide as a screenshot (16:9, 1920x1080 or equivalent).
-- Create a contact sheet with all slides in sequence.
+- Follow the standard pipeline above.
 
 If no renderer is available:
 - Extract slide structure from HTML (section elements, data-layout attributes, text content, image references).

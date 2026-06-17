@@ -191,6 +191,28 @@ For scientific evidence pages:
 - keep captions attached to the figure edge,
 - use a source footer.
 
+## Figure Information Density Assessment
+
+Not every figure deserves a full-page layout. Before assigning a full-page layout (S22 Image Hero) or giving a figure its own slide, assess the figure's information density:
+
+### Criteria for full-page / full-width treatment
+
+1. **Figure type**: Architecture diagrams, workflow diagrams, multi-panel comparison figures, and complex system diagrams usually carry enough information for full-page treatment. Simple bar charts, single-line plots, or single-panel schematics usually do not.
+2. **Internal information content**: Multi-panel figures (3+ sub-panels), figures with multiple data dimensions, complex annotations, or detailed legends justify full-page. Single-dimension data, simple trend lines, or single-view illustrations do not.
+3. **Role in the paper**: Core evidence figures (main results, key ablations, central mechanism) can justify full-page treatment. Supporting/supplementary figures, illustrative schematics, or context-setting visuals should be combined with text or other figures.
+
+### Handling low-information figures
+
+When a figure does not have enough information to justify a full page:
+- Combine with text and speaker notes into a text-led synthesis page (S13, S19).
+- Place alongside another related figure for comparison (S08, S21).
+- Shrink into a card within a multi-card layout (S16, S19).
+- Use as a small embedded illustration within a text-heavy page.
+
+### S22 Image Hero usage condition
+
+S22 Image Hero should only be used when the figure passes the information density assessment. A figure that is both information-rich AND central to the paper's argument qualifies for S22.
+
 ## Screenshot + Table Design Rule
 
 - Screenshots must be image-only crops: no body paragraphs, figure legends, table captions, or surrounding PDF text.
@@ -227,6 +249,41 @@ Do not default to a fixed 50/50 left-right split. Choose layout proportions from
 
 If a figure cannot be read at presentation scale when scaled down, crop it, split it across slides, or give it its own slide. Prefer one legible visual over several cramped ones. Never shrink a dense figure into a tiny slot to preserve layout symmetry.
 
+## SVG Logic Diagram Guide
+
+For certain types of non-photographic diagrams, hand-drawn inline SVG is preferred over paper screenshot crops. Use SVG sparingly — aim for 1-3 SVG diagrams per deck, not more.
+
+### When to use SVG
+
+- Architecture diagrams, workflow diagrams, module relationship maps, comparison frameworks, methodology flowcharts
+- Simple geometric logic diagrams that can be expressed with rectangles, arrows, and lines
+- Diagrams where the paper's original is too low-resolution, too cluttered, or contains untranslated English labels
+
+### When NOT to use SVG
+
+- Data charts (bar charts, line charts, scatter plots) — use paper screenshots
+- Photographs, microscopy images, or rendered visualizations — use paper screenshots
+- Complex multi-element diagrams that would take excessive effort to redraw
+
+### SVG Design Principles
+
+- **Minimal geometry**: Rectangles, arrows, lines only. No shadows, no gradients, no rounded corners.
+- **Swiss color palette**: Use the deck's accent color for highlights, grays for borders and backgrounds.
+- **Typography**: Use `Noto Sans SC` for all text in SVG, font-size no smaller than 14px.
+- **Inline embedding**: Embed SVG directly into the HTML section, not as external files.
+- **Text in SVG**: All visible text must be in Chinese. Keep labels concise.
+
+### Example SVG structure
+
+```html
+<svg viewBox="0 0 800 400" style="width:100%; height:auto;">
+  <!-- Use Swiss grays and accent color -->
+  <rect x="20" y="20" width="200" height="60" fill="#f0f0ee" stroke="#002FA7" stroke-width="2"/>
+  <text x="120" y="55" text-anchor="middle" font-family="Noto Sans SC" font-size="16" fill="#0a0a0a">输入模块</text>
+  <!-- arrows, connections, etc. -->
+</svg>
+```
+
 ## Evidence Hierarchy on a Slide
 
 For any result or evidence slide, order the visual logic in this priority:
@@ -249,11 +306,92 @@ Slides should feel complete rather than empty. Most slides should have:
 Add fullness through evidence-supporting elements: metric chips, compact interpretation bands, short source strips, or a narrow comparison block. Avoid large unstructured blank areas caused by tiny figures, short bullets marooned in one corner, or captions that sit far from the visual.
 
 Do not fill space with decoration alone. Any added block should clarify hierarchy, guide reading order, or improve figure readability.
+
+### Content Density Standards
+
+Every page must contain enough substantive content. Apply these minimums:
+
+- Each non-transition page must contain at least **2-4 concrete information points** (data points, arguments, comparison results, or specific metrics).
+- Three-card pages (S13, S19): each card must have at least **2-3 sentences of substantive content**. "One-sentence cards" (a card with only a title and no detail) are forbidden.
+- Text-led synthesis pages: must contain at least 3-4 bullet points with specific data or evidence.
+- Do not move all deep explanation to speaker notes — keep at least a summarizing conclusion line on the page itself. Moving content to speaker notes is the **exception**, not the default.
+
+### Content Density Self-Check
+
+Before finalizing a slide, ask:
+- Does this page have enough specific numbers, comparisons, or evidence to stand on its own?
+- Would a viewer understand the point without reading the speaker notes?
+- Is there any card or section that is just a title with no body content?
+
+## Two-Pass Font Sizing
+
+Font sizes should be applied in two passes:
+
+### Pass 1 — Global Unified Sizing
+
+Apply the typography weight ladder, Chinese title sizing tiers, and minimum readable sizes uniformly across the entire deck. This ensures consistent typographic hierarchy.
+
+### Pass 2 — Per-Page Adjustment
+
+After visual review (Phase 5 QA), adjust font sizes per-page based on content richness:
+
+- **Dense pages** (rich content, many data points): Slightly reduce font sizes to accommodate more information, but never go below the minimum readable sizes (18px body, 16px cards, 14px meta).
+- **Sparse pages** (light content, few elements): Slightly increase font sizes to fill the space naturally.
+- **Weight ladder still applies**: After adjustment, verify that the weight ladder (larger = lighter weight) is still maintained.
+- **Title sizing tiers still apply**: Adjusted titles must still fit the Chinese title sizing categories.
+
+## KaTeX Formula Rendering
+
+For HTML slides containing mathematical formulas, use KaTeX as the standard rendering engine.
+
+### Why KaTeX
+
+- Faster rendering than MathJax (server-side and client-side)
+- Lighter footprint, suitable for presentation scenarios
+- Default KaTeX_Main font is compatible with the Swiss sans-serif style
+- Well-supported LaTeX syntax subset
+
+### CDN Integration
+
+Add to the HTML `<head>`:
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "\\(", right: "\\)", display: false}
+    ]
+  });
+});
+</script>
+```
+
+### Formula Syntax
+
+- **Inline formulas**: Use `\(...\)` delimiters, e.g., `\(E = mc^2\)`
+- **Display (block) formulas**: Use `$$...$$` delimiters, e.g., `$$\mathcal{L} = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu}$$`
+- **Formula color**: Use `\color{#002FA7}` to match the IKB accent color when highlighting key terms
+- **Formula sizing**: Display formulas should use `\Large` or `\LARGE` to ensure readability at projection scale. For inline formulas, add CSS: `.katex { font-size: 1.1em; }`
+
+### Fallback
+
+If KaTeX CDN is unavailable, use MathJax 3.x as fallback:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+```
+
 ## HTML Construction
 
 Preferred approach:
 
-1. Copy or read `template-swiss.html` (from `guizang-ppt-skill/assets/` if available, or from a local copy in the project workspace).
+1. Copy or read `template-swiss.html` (from `zuhui-ppt-master/assets/`).
 2. Replace the required title placeholder.
 3. Inject only minimal project CSS needed for paper-specific large figure/table layouts.
 4. Insert slide `<section>` blocks into the template's slide insertion region.

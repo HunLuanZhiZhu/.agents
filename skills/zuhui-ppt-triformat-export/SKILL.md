@@ -9,11 +9,11 @@ description: Export synchronized PPTX, Swiss International HTML, and PDF version
 
 Generate and preserve three final formats from one content model:
 
-- `.pptx` for editable presentation and local modification,
-- `.html` for Swiss International horizontal web presentation,
-- `.pdf` for portable review, printing, and archival.
+- `.html` for Swiss International horizontal web presentation (canonical source),
+- `.pdf` for portable review, printing, and archival (exported from HTML),
+- `.pptx` for editable presentation and local modification (screenshot-backed by default).
 
-Do not treat HTML/PDF as optional side products when the user asks to keep all three.
+The HTML is the canonical source. PPTX and PDF are derived outputs. HTML/PDF must not be treated as optional side products.
 
 ## Project Parameters
 
@@ -29,9 +29,9 @@ All output paths and naming use the project parameters defined in `zuhui-ppt-mas
 Recommended order:
 
 1. Build the content model and slide specs.
-2. Generate PPTX with editable text, native tables, and embedded figure/table crops.
-3. Generate HTML by injecting sections into `template-swiss.html`.
-4. Export PDF from the HTML so the PDF reflects the Swiss visual source.
+2. Generate HTML by injecting sections into `template-swiss.html` (canonical source).
+3. Export PDF from the HTML so the PDF reflects the canonical source.
+4. Generate PPTX (screenshot-backed by default) from the HTML.
 5. Generate speaker notes and QA report.
 
 The same slide specs should drive all outputs to prevent drift.
@@ -49,13 +49,14 @@ The same slide specs should drive all outputs to prevent drift.
 
 ## HTML Rules
 
-- Use `template-swiss.html` as the base (from `guizang-ppt-skill/assets/` if available, or a local copy in the project workspace).
+- Use `template-swiss.html` as the base (from `zuhui-ppt-master/assets/`).
 - Replace required title placeholders.
 - Insert only real slide sections into the template deck region.
 - Every real slide needs `data-layout`.
 - Use `data-animate` consistent with the chosen Swiss layout family.
 - Keep large figures in `assets/` and reference them with stable relative paths.
 - Inject print CSS only as needed to export all slides to PDF.
+- If the deck contains mathematical formulas, include KaTeX CDN links in `<head>` (refer to the `zuhui-ppt-swiss-design` KaTeX Formula Rendering section).
 
 ## PDF Rules
 
@@ -68,11 +69,11 @@ If browser print clips fixed-layout slides, render each slide to a 16:9 screensh
 
 ## Visual-Fidelity Fallback
 
-The normal target is editable PPTX text plus native tables. If a version must exactly preserve browser-rendered visual fidelity and native PPTX recreation is worse, a screenshot-backed PPTX is acceptable only when:
+The default target is screenshot-backed PPTX that preserves browser-rendered visual fidelity from the HTML canonical source. If the user explicitly requires fully editable PPTX, native recreation is acceptable only when:
 
-- the user asked for visual quality over editability or rejected previous visual styling,
+- the user explicitly asked for editability over visual quality,
 - HTML remains the canonical source,
-- the QA report states clearly that the PPTX is visual-fidelity/screenshot-backed rather than fully editable,
+- the QA report states clearly that the PPTX is native/editable rather than screenshot-backed,
 - native tables still exist in HTML and are not sourced from table screenshots.
 
 ## Output Package
